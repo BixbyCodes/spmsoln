@@ -1,0 +1,2445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SPM Complete PYQ Solutions 2022–2025</title>
+<style>
+  :root {
+    --bg: #ffffff; --bg2: #f7f6f2; --bg3: #f0ede6;
+    --text: #1a1a18; --text2: #4a4a46; --text3: #7a7a74;
+    --border: rgba(0,0,0,0.12); --border2: rgba(0,0,0,0.22);
+    --accent: #534AB7; --accent2: #0F6E56; --accent3: #993C1D;
+    --info: #185FA5; --warn: #854F0B; --success: #3B6D11;
+    --red: #A32D2D;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1c1c1a; --bg2: #252522; --bg3: #2e2e2b;
+      --text: #e8e6df; --text2: #b0aea6; --text3: #7a7a74;
+      --border: rgba(255,255,255,0.1); --border2: rgba(255,255,255,0.2);
+      --accent: #AFA9EC; --accent2: #5DCAA5; --accent3: #F0997B;
+      --info: #85B7EB; --warn: #EF9F27; --success: #97C459;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Georgia, serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.75; }
+  
+  /* Nav */
+  #toc { position: fixed; top: 0; left: 0; width: 260px; height: 100vh; background: var(--bg2); border-right: 0.5px solid var(--border); overflow-y: auto; padding: 16px 0; z-index: 100; }
+  #toc h2 { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text3); padding: 0 16px 8px; }
+  #toc a { display: block; font-size: 12px; color: var(--text2); padding: 4px 16px; text-decoration: none; border-left: 2px solid transparent; line-height: 1.4; }
+  #toc a:hover { color: var(--accent); border-left-color: var(--accent); background: var(--bg3); }
+  #toc .toc-section { font-size: 11px; font-weight: 600; color: var(--text3); padding: 12px 16px 2px; letter-spacing: 0.06em; text-transform: uppercase; }
+  
+  /* Main */
+  #main { margin-left: 260px; max-width: 900px; padding: 40px 48px 80px; }
+  
+  /* Header */
+  .page-title { font-size: 26px; font-weight: 700; color: var(--text); margin-bottom: 6px; font-family: Georgia, serif; }
+  .page-sub { font-size: 13px; color: var(--text3); margin-bottom: 32px; }
+  
+  /* Paper banners */
+  .paper-banner { background: var(--accent); color: white; padding: 12px 20px; border-radius: 8px; margin: 36px 0 24px; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; }
+  .paper-banner.p2 { background: var(--accent2); }
+  .paper-banner.p3 { background: var(--accent3); }
+  
+  /* Section headings */
+  .sec-head { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin: 28px 0 16px; padding-bottom: 6px; border-bottom: 1.5px solid var(--accent); }
+  
+  /* Question blocks */
+  .q-block { margin-bottom: 28px; border: 0.5px solid var(--border); border-radius: 10px; overflow: hidden; }
+  .q-head { background: var(--bg2); padding: 10px 16px; display: flex; align-items: flex-start; gap: 12px; }
+  .q-num { font-size: 11px; font-weight: 700; color: white; background: var(--accent); padding: 2px 8px; border-radius: 4px; white-space: nowrap; margin-top: 2px; }
+  .q-num.p2 { background: var(--accent2); }
+  .q-num.p3 { background: var(--accent3); }
+  .q-title { font-size: 13px; font-weight: 600; color: var(--text); flex: 1; }
+  .q-body { padding: 16px 20px; }
+  
+  /* Reference box */
+  .ref-box { background: var(--bg3); border-left: 3px solid var(--warn); border-radius: 0 8px 8px 0; padding: 12px 16px; font-size: 13px; color: var(--text2); }
+  .ref-box strong { color: var(--warn); }
+  
+  /* Answer content */
+  h4 { font-size: 14px; font-weight: 700; color: var(--accent); margin: 14px 0 6px; font-family: Georgia, serif; }
+  p { margin-bottom: 10px; font-size: 14px; }
+  ul, ol { margin: 6px 0 10px 20px; font-size: 14px; }
+  li { margin-bottom: 4px; }
+  
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 12px 0; }
+  th { background: var(--bg3); padding: 8px 10px; text-align: left; font-weight: 600; border: 0.5px solid var(--border); }
+  td { padding: 7px 10px; border: 0.5px solid var(--border); vertical-align: top; }
+  tr:nth-child(even) td { background: var(--bg2); }
+  
+  /* Formula box */
+  .formula { background: var(--bg2); border: 0.5px solid var(--border); border-radius: 6px; padding: 10px 14px; font-family: 'Courier New', monospace; font-size: 13px; margin: 8px 0; color: var(--info); }
+  
+  /* Highlight box */
+  .highlight { background: #E6F1FB; border-left: 3px solid var(--info); border-radius: 0 6px 6px 0; padding: 10px 14px; font-size: 13px; margin: 10px 0; }
+  @media (prefers-color-scheme: dark) { .highlight { background: #0c2840; } }
+  
+  /* Answer summary row */
+  .ans-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 8px 0; }
+  .ans-pill { background: var(--bg3); border: 0.5px solid var(--border); border-radius: 20px; padding: 4px 12px; font-size: 12px; }
+  .ans-pill strong { color: var(--accent2); }
+  
+  /* SVG diagrams */
+  .diagram-wrap { background: var(--bg2); border: 0.5px solid var(--border); border-radius: 10px; padding: 16px; margin: 14px 0; overflow: hidden; }
+  .diagram-title { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text3); margin-bottom: 10px; }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    #toc { display: none; }
+    #main { margin-left: 0; padding: 20px 16px 60px; }
+  }
+  
+  /* Print */
+  @media print {
+    #toc { display: none; }
+    #main { margin-left: 0; }
+  }
+
+  /* Critical path table */
+  .cp-table td.cp { background: #FCEBEB; font-weight: 700; color: var(--red); }
+  @media (prefers-color-scheme: dark) { .cp-table td.cp { background: #3a1212; } }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ TABLE OF CONTENTS ═══════════════════ -->
+<nav id="toc" aria-label="Table of contents">
+  <h2>📚 SPM Solutions</h2>
+
+  <div class="toc-section">2024–25 Paper</div>
+  <a href="#p1-a">Section A — Short Answers</a>
+  <a href="#p1-b">Section B — Medium (7 marks)</a>
+  <a href="#p1-c">Section C — Long (7 marks)</a>
+
+  <div class="toc-section">2023–24 Paper</div>
+  <a href="#p2-a">Section A — Short Answers</a>
+  <a href="#p2-b">Section B — Medium (10 marks)</a>
+  <a href="#p2-c">Section C — Long (10 marks)</a>
+
+  <div class="toc-section">2022–23 Paper</div>
+  <a href="#p3-a">Section A — Short Answers</a>
+  <a href="#p3-b">Section B — Medium (10 marks)</a>
+  <a href="#p3-c">Section C — Long (10 marks)</a>
+
+  <div class="toc-section">Key Diagrams</div>
+  <a href="#diag-plc">Project Life Cycle</a>
+  <a href="#diag-rad">RAD Model</a>
+  <a href="#diag-agile">Agile/Scrum</a>
+  <a href="#diag-cpm1">CPM — 2023-24</a>
+  <a href="#diag-cpm2">CPM — 2022-23</a>
+  <a href="#diag-wbs">WBS Example</a>
+  <a href="#diag-evm">EVM Framework</a>
+  <a href="#diag-cocomo">COCOMO II</a>
+  <a href="#diag-hackman">Hackman-Oldham Model</a>
+</nav>
+
+<!-- ═══════════════════ MAIN CONTENT ═══════════════════ -->
+<main id="main">
+
+<h1 class="page-title">Software Project Management</h1>
+<p class="page-sub">Complete PYQ Solutions with Diagrams | 2022-23 · 2023-24 · 2024-25 | All duplicates cross-referenced</p>
+
+<!-- ══════════════════════════════════════════════════════════
+     PAPER 1 — 2024-25
+══════════════════════════════════════════════════════════ -->
+<div class="paper-banner">📄 Paper 1 — 2024-25 (BOE068) | 70 Marks</div>
+
+<div id="p1-a" class="sec-head">Section A — Short Answers (2 × 7 = 14)</div>
+
+<!-- Q1a -->
+<div class="q-block" id="q1a-24">
+  <div class="q-head"><span class="q-num">Q1a</span><div class="q-title">Key characteristics of a project</div></div>
+  <div class="q-body">
+    <table>
+      <tr><th>Characteristic</th><th>Meaning</th></tr>
+      <tr><td><strong>Temporary</strong></td><td>Has a definite start and end date</td></tr>
+      <tr><td><strong>Unique</strong></td><td>Produces a one-of-a-kind output</td></tr>
+      <tr><td><strong>Goal-oriented</strong></td><td>Specific objectives to achieve</td></tr>
+      <tr><td><strong>Resource-constrained</strong></td><td>Limited budget, time, people</td></tr>
+      <tr><td><strong>Progressive elaboration</strong></td><td>Developed step-by-step as more info is known</td></tr>
+      <tr><td><strong>Risk &amp; uncertainty</strong></td><td>Outcome not guaranteed</td></tr>
+      <tr><td><strong>Interdependent activities</strong></td><td>Tasks depend on each other (predecessors/successors)</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- Q1b -->
+<div class="q-block" id="q1b-24">
+  <div class="q-head"><span class="q-num">Q1b</span><div class="q-title">Agile Methodology</div></div>
+  <div class="q-body">
+    <p>Agile is an <strong>iterative and incremental</strong> software development methodology that delivers working software in short cycles called <strong>sprints</strong> (1–4 weeks).</p>
+    <h4>4 Agile Values (Manifesto):</h4>
+    <ol>
+      <li>Individuals and interactions <em>over</em> processes and tools</li>
+      <li>Working software <em>over</em> comprehensive documentation</li>
+      <li>Customer collaboration <em>over</em> contract negotiation</li>
+      <li>Responding to change <em>over</em> following a plan</li>
+    </ol>
+    <p>Key frameworks: <strong>Scrum, Kanban, XP</strong> (Extreme Programming)</p>
+  </div>
+</div>
+
+<!-- Q1c -->
+<div class="q-block" id="q1c-24">
+  <div class="q-head"><span class="q-num">Q1c</span><div class="q-title">Stages of Project Life Cycle</div></div>
+  <div class="q-body">
+    <div id="diag-plc" class="diagram-wrap">
+      <div class="diagram-title">Project Life Cycle — Linear Flow</div>
+      <svg width="100%" viewBox="0 0 680 90" role="img">
+        <title>Project Life Cycle Stages</title>
+        <desc>Five sequential stages: Initiation, Planning, Execution, Monitoring, Closure connected by arrows</desc>
+        <defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+        <!-- boxes -->
+        <g>
+          <rect x="10" y="22" width="110" height="46" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+          <text x="65" y="40" text-anchor="middle" font-size="12" font-weight="600" fill="#3C3489">Initiation</text>
+          <text x="65" y="56" text-anchor="middle" font-size="10" fill="#534AB7">Feasibility</text>
+        </g>
+        <line x1="120" y1="45" x2="140" y2="45" stroke="#534AB7" stroke-width="1" marker-end="url(#arr)"/>
+        <g>
+          <rect x="140" y="22" width="110" height="46" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+          <text x="195" y="40" text-anchor="middle" font-size="12" font-weight="600" fill="#085041">Planning</text>
+          <text x="195" y="56" text-anchor="middle" font-size="10" fill="#0F6E56">Scope / Budget</text>
+        </g>
+        <line x1="250" y1="45" x2="270" y2="45" stroke="#0F6E56" stroke-width="1" marker-end="url(#arr)"/>
+        <g>
+          <rect x="270" y="22" width="110" height="46" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+          <text x="325" y="40" text-anchor="middle" font-size="12" font-weight="600" fill="#633806">Execution</text>
+          <text x="325" y="56" text-anchor="middle" font-size="10" fill="#854F0B">Development</text>
+        </g>
+        <line x1="380" y1="45" x2="400" y2="45" stroke="#854F0B" stroke-width="1" marker-end="url(#arr)"/>
+        <g>
+          <rect x="400" y="22" width="118" height="46" rx="8" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.5"/>
+          <text x="459" y="40" text-anchor="middle" font-size="12" font-weight="600" fill="#791F1F">Monitor &amp; Control</text>
+          <text x="459" y="56" text-anchor="middle" font-size="10" fill="#A32D2D">Track progress</text>
+        </g>
+        <line x1="518" y1="45" x2="538" y2="45" stroke="#A32D2D" stroke-width="1" marker-end="url(#arr)"/>
+        <g>
+          <rect x="538" y="22" width="110" height="46" rx="8" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+          <text x="593" y="40" text-anchor="middle" font-size="12" font-weight="600" fill="#27500A">Closure</text>
+          <text x="593" y="56" text-anchor="middle" font-size="10" fill="#3B6D11">Handover</text>
+        </g>
+      </svg>
+    </div>
+    <ol>
+      <li><strong>Initiation</strong> — define project, feasibility study</li>
+      <li><strong>Planning</strong> — scope, schedule, cost, risk planning</li>
+      <li><strong>Execution</strong> — actual development/implementation</li>
+      <li><strong>Monitoring &amp; Controlling</strong> — track progress, manage changes</li>
+      <li><strong>Closure</strong> — deliver product, release resources, post-mortem</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Q1d -->
+<div class="q-block" id="q1d-24">
+  <div class="q-head"><span class="q-num">Q1d</span><div class="q-title">Three Forms of Presenting a Project Schedule</div></div>
+  <div class="q-body">
+    <ol>
+      <li><strong>Gantt Chart</strong> — horizontal bar chart showing tasks against time timeline</li>
+      <li><strong>Network Diagram (PERT/CPM)</strong> — nodes and arrows showing task dependencies</li>
+      <li><strong>Milestone Chart</strong> — highlights key events/deadlines only (simpler than Gantt)</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Q1e -->
+<div class="q-block" id="q1e-24">
+  <div class="q-head"><span class="q-num">Q1e</span><div class="q-title">Activity-Based Approach</div></div>
+  <div class="q-body">
+    <p>The <strong>activity-based approach</strong> breaks a project into individual activities/tasks. Each activity is assigned resources, duration, and linked to predecessor/successor activities. It focuses on <em>what work needs to be done</em> rather than just deliverables, enabling accurate scheduling (CPM/PERT) and cost estimation.</p>
+  </div>
+</div>
+
+<!-- Q1f -->
+<div class="q-block" id="q1f-24">
+  <div class="q-head"><span class="q-num">Q1f</span><div class="q-title">Earned Value Analysis (EVA)</div></div>
+  <div class="q-body">
+    <p>EVA integrates scope, schedule, and cost into a single performance measurement framework.</p>
+    <div id="diag-evm" class="diagram-wrap">
+      <div class="diagram-title">Earned Value Key Metrics</div>
+      <svg width="100%" viewBox="0 0 680 180" role="img">
+        <title>Earned Value Analysis Metrics</title>
+        <desc>Six key EVM metrics shown as labeled boxes: EV, PV, AC, CV, SV, CPI, SPI</desc>
+        <defs><marker id="arr2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+        <!-- Input metrics -->
+        <rect x="20" y="20" width="130" height="52" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+        <text x="85" y="42" text-anchor="middle" font-size="13" font-weight="600" fill="#085041">EV</text>
+        <text x="85" y="60" text-anchor="middle" font-size="10" fill="#0F6E56">% done × BAC</text>
+
+        <rect x="170" y="20" width="130" height="52" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+        <text x="235" y="42" text-anchor="middle" font-size="13" font-weight="600" fill="#3C3489">PV</text>
+        <text x="235" y="60" text-anchor="middle" font-size="10" fill="#534AB7">Planned budget</text>
+
+        <rect x="320" y="20" width="130" height="52" rx="8" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.5"/>
+        <text x="385" y="42" text-anchor="middle" font-size="13" font-weight="600" fill="#791F1F">AC</text>
+        <text x="385" y="60" text-anchor="middle" font-size="10" fill="#A32D2D">Actual cost spent</text>
+
+        <rect x="470" y="20" width="130" height="52" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+        <text x="535" y="42" text-anchor="middle" font-size="13" font-weight="600" fill="#633806">BAC</text>
+        <text x="535" y="60" text-anchor="middle" font-size="10" fill="#854F0B">Total budget</text>
+
+        <!-- Lines down -->
+        <line x1="85" y1="72" x2="85" y2="105" stroke="#0F6E56" stroke-width="0.8"/>
+        <line x1="235" y1="72" x2="235" y2="105" stroke="#534AB7" stroke-width="0.8"/>
+        <line x1="385" y1="72" x2="385" y2="105" stroke="#A32D2D" stroke-width="0.8"/>
+
+        <!-- Derived metrics -->
+        <rect x="20" y="105" width="160" height="52" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+        <text x="100" y="127" text-anchor="middle" font-size="13" font-weight="600" fill="#0C447C">CV = EV − AC</text>
+        <text x="100" y="145" text-anchor="middle" font-size="10" fill="#185FA5">&lt;0 = over budget</text>
+
+        <rect x="200" y="105" width="160" height="52" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+        <text x="280" y="127" text-anchor="middle" font-size="13" font-weight="600" fill="#0C447C">SV = EV − PV</text>
+        <text x="280" y="145" text-anchor="middle" font-size="10" fill="#185FA5">&lt;0 = behind schedule</text>
+
+        <rect x="380" y="105" width="160" height="52" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+        <text x="460" y="127" text-anchor="middle" font-size="13" font-weight="600" fill="#0C447C">CPI=EV/AC  SPI=EV/PV</text>
+        <text x="460" y="145" text-anchor="middle" font-size="10" fill="#185FA5">&gt;1 = good performance</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- Q1g -->
+<div class="q-block" id="q1g-24">
+  <div class="q-head"><span class="q-num">Q1g</span><div class="q-title">Role of Leadership in Project Management</div></div>
+  <div class="q-body">
+    <ul>
+      <li><strong>Vision Setting</strong> — define clear goals and direction</li>
+      <li><strong>Motivation</strong> — keep team morale and productivity high</li>
+      <li><strong>Decision Making</strong> — resolve conflicts, make timely decisions</li>
+      <li><strong>Communication</strong> — ensure clear information flow across all stakeholders</li>
+      <li><strong>Risk Management</strong> — proactively identify and mitigate risks</li>
+      <li><strong>Team Building</strong> — assign right roles, develop talent</li>
+      <li><strong>Change Management</strong> — guide team through uncertainty and scope changes</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ───── Section B ───── -->
+<div id="p1-b" class="sec-head">Section B — Medium Answers (7 × 3 = 21)</div>
+
+<!-- Q2a -->
+<div class="q-block" id="q2a-24">
+  <div class="q-head"><span class="q-num">Q2a</span><div class="q-title">Significance of Software Project Management</div></div>
+  <div class="q-body">
+    <h4>Why SPM Matters:</h4>
+    <p>Software projects historically have high failure rates — late delivery, cost overruns, poor quality. SPM addresses this systematically.</p>
+    <table>
+      <tr><th>Key Activity</th><th>Purpose</th></tr>
+      <tr><td>Project initiation &amp; feasibility</td><td>Determine if project is viable</td></tr>
+      <tr><td>Scope definition (WBS)</td><td>Prevent scope creep</td></tr>
+      <tr><td>Effort &amp; cost estimation (FP, COCOMO)</td><td>Accurate budgeting</td></tr>
+      <tr><td>Scheduling (CPM, PERT, Gantt)</td><td>On-time delivery</td></tr>
+      <tr><td>Risk management</td><td>Proactive problem prevention</td></tr>
+      <tr><td>Quality management</td><td>Maintain standards</td></tr>
+      <tr><td>Configuration management</td><td>Version and change control</td></tr>
+    </table>
+    <h4>Methodologies Used:</h4>
+    <ul>
+      <li>Traditional: Waterfall, Spiral, RAD</li>
+      <li>Agile: Scrum, Kanban, XP — for iterative delivery</li>
+      <li>Governance: PRINCE2, PMBOK</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Q2b -->
+<div class="q-block" id="q2b-24">
+  <div class="q-head"><span class="q-num">Q2b</span><div class="q-title">RAD Model — Significant Features</div></div>
+  <div class="q-body">
+    <div id="diag-rad" class="diagram-wrap">
+      <div class="diagram-title">RAD Model — Four Phases</div>
+      <svg width="100%" viewBox="0 0 680 120" role="img">
+        <title>RAD Model Phases</title>
+        <desc>Four phases of RAD: Requirements Planning, User Design, Construction, Cutover</desc>
+        <defs><marker id="arr3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+        <rect x="10" y="20" width="148" height="70" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+        <text x="84" y="50" text-anchor="middle" font-size="12" font-weight="600" fill="#3C3489">Requirements</text>
+        <text x="84" y="66" text-anchor="middle" font-size="11" font-weight="600" fill="#3C3489">Planning</text>
+        <text x="84" y="82" text-anchor="middle" font-size="10" fill="#534AB7">JAD workshops</text>
+
+        <line x1="158" y1="55" x2="178" y2="55" stroke="#534AB7" stroke-width="1.2" marker-end="url(#arr3)"/>
+
+        <rect x="178" y="20" width="148" height="70" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+        <text x="252" y="50" text-anchor="middle" font-size="12" font-weight="600" fill="#085041">User</text>
+        <text x="252" y="66" text-anchor="middle" font-size="11" font-weight="600" fill="#085041">Design</text>
+        <text x="252" y="82" text-anchor="middle" font-size="10" fill="#0F6E56">Prototyping</text>
+
+        <line x1="326" y1="55" x2="346" y2="55" stroke="#0F6E56" stroke-width="1.2" marker-end="url(#arr3)"/>
+
+        <rect x="346" y="20" width="148" height="70" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+        <text x="420" y="50" text-anchor="middle" font-size="12" font-weight="600" fill="#633806">Construction</text>
+        <text x="420" y="66" text-anchor="middle" font-size="10" fill="#854F0B">Rapid coding</text>
+        <text x="420" y="82" text-anchor="middle" font-size="10" fill="#854F0B">CASE tools</text>
+
+        <line x1="494" y1="55" x2="514" y2="55" stroke="#854F0B" stroke-width="1.2" marker-end="url(#arr3)"/>
+
+        <rect x="514" y="20" width="148" height="70" rx="8" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+        <text x="588" y="50" text-anchor="middle" font-size="12" font-weight="600" fill="#27500A">Cutover</text>
+        <text x="588" y="66" text-anchor="middle" font-size="10" fill="#3B6D11">Testing &amp; deploy</text>
+        <text x="588" y="82" text-anchor="middle" font-size="10" fill="#3B6D11">Data migration</text>
+      </svg>
+    </div>
+    <h4>Key Features of RAD:</h4>
+    <ul>
+      <li><strong>Speed</strong> — delivers each module in 60–90 days</li>
+      <li><strong>User Involvement</strong> — continuous feedback at every phase via JAD sessions</li>
+      <li><strong>Prototyping</strong> — working prototypes built early for user validation</li>
+      <li><strong>Component Reuse</strong> — reuses existing code/components to save time</li>
+      <li><strong>CASE Tools</strong> — Computer-Aided Software Engineering tools for speed</li>
+      <li><strong>Parallel Development</strong> — multiple teams work simultaneously on different modules</li>
+      <li><strong>Time-boxing</strong> — strict time limits on each phase</li>
+    </ul>
+    <h4>Limitations:</h4>
+    <ul>
+      <li>Not suitable for large-scale systems</li>
+      <li>Requires highly skilled developers</li>
+      <li>Not good for systems with performance requirements</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Q2c -->
+<div class="q-block" id="q2c-24">
+  <div class="q-head"><span class="q-num">Q2c</span><div class="q-title">(i) Risk Identification &amp; (ii) PERT Technique</div></div>
+  <div class="q-body">
+    <h4>(i) Risk Identification</h4>
+    <p>Risk identification is the process of determining which risks may affect the project and documenting their characteristics.</p>
+    <h4>Methods:</h4>
+    <ul>
+      <li><strong>Brainstorming</strong> — team discussions to list potential risks</li>
+      <li><strong>Checklists</strong> — past project risk lists</li>
+      <li><strong>Delphi Technique</strong> — expert consensus anonymously</li>
+      <li><strong>SWOT Analysis</strong> — Strengths, Weaknesses, Opportunities, Threats</li>
+      <li><strong>Assumption Analysis</strong> — test validity of project assumptions</li>
+    </ul>
+    <h4>Risk Categories:</h4>
+    <table>
+      <tr><th>Category</th><th>Examples</th></tr>
+      <tr><td>Technical</td><td>New technology, integration failures, complexity</td></tr>
+      <tr><td>Project</td><td>Schedule slippage, resource unavailability</td></tr>
+      <tr><td>Business</td><td>Market change, budget cuts, stakeholder changes</td></tr>
+      <tr><td>External</td><td>Vendor failure, regulatory changes</td></tr>
+    </table>
+    <p><strong>Output:</strong> Risk Register — lists risks with likelihood, impact, and owners.</p>
+
+    <h4>(ii) PERT Technique</h4>
+    <p>PERT (Program Evaluation and Review Technique) is a probabilistic scheduling method for projects where activity durations are <strong>uncertain</strong>.</p>
+    <div class="formula">Expected Time: te = (O + 4M + P) / 6<br>Variance: σ² = [(P − O) / 6]²<br>Where O=Optimistic, M=Most Likely, P=Pessimistic</div>
+    <p>→ For a worked numerical PERT example, see <strong><a href="#q5b-22">2022-23 Q5b</a></strong></p>
+  </div>
+</div>
+
+<!-- Q2d -->
+<div class="q-block" id="q2d-24">
+  <div class="q-head"><span class="q-num">Q2d</span><div class="q-title">Cost Monitoring Techniques</div></div>
+  <div class="q-body">
+    <table>
+      <tr><th>Technique</th><th>How it Works</th><th>Effectiveness</th></tr>
+      <tr><td><strong>Earned Value Management (EVM)</strong></td><td>Integrates scope, schedule, cost. Tracks EV, PV, AC, CPI, SPI</td><td>Best for early warning of overruns</td></tr>
+      <tr><td><strong>Variance Analysis</strong></td><td>CV = EV−AC; SV = EV−PV. Negative = problem</td><td>Simple, easy to compute</td></tr>
+      <tr><td><strong>Trend Analysis</strong></td><td>Plots cost/schedule trends over time to forecast future</td><td>Good for long-term projects</td></tr>
+      <tr><td><strong>CPI (Cost Performance Index)</strong></td><td>CPI = EV/AC. &lt;1 = over budget; &gt;1 = under budget</td><td>Quick single-number health check</td></tr>
+      <tr><td><strong>EAC Forecasting</strong></td><td>EAC = BAC/CPI. Predicts final project cost</td><td>Essential for financial planning</td></tr>
+      <tr><td><strong>Budget vs Actual</strong></td><td>Compare planned vs. actual spending</td><td>Easy but ignores work completed</td></tr>
+      <tr><td><strong>Milestone/Gate Reviews</strong></td><td>Cost checked at predefined milestones</td><td>Good for contract-based projects</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- Q2e -->
+<div class="q-block" id="q2e-24">
+  <div class="q-head"><span class="q-num">Q2e</span><div class="q-title">Stress Management Techniques for Project Staff</div></div>
+  <div class="q-body">
+    <h4>Sources of Stress:</h4>
+    <p>Tight deadlines, unclear requirements, team conflicts, excessive workload, fear of failure.</p>
+    <h4>Techniques:</h4>
+    <ol>
+      <li><strong>Workload Management</strong> — realistic scheduling; avoid overloading individuals</li>
+      <li><strong>Clear Communication</strong> — reduce ambiguity; regular standups and status updates</li>
+      <li><strong>Time Management Training</strong> — prioritization, task batching techniques</li>
+      <li><strong>Physical Activity</strong> — encourage exercise breaks, ergonomic workspace</li>
+      <li><strong>Mindfulness &amp; Meditation</strong> — structured relaxation sessions</li>
+      <li><strong>Team Building Activities</strong> — strengthen relationships, reduce interpersonal conflict</li>
+      <li><strong>Counseling / EAP</strong> — Employee Assistance Programs for personal stress</li>
+      <li><strong>Flexible Work Hours</strong> — allow work-life balance</li>
+      <li><strong>Recognition &amp; Rewards</strong> — acknowledge achievements to boost morale</li>
+      <li><strong>Schedule Buffers</strong> — add time contingency to reduce deadline panic</li>
+    </ol>
+    <p><strong>Manager's Role:</strong> Lead by example; be approachable; don't micromanage; celebrate small wins.</p>
+  </div>
+</div>
+
+<!-- ───── Section C ───── -->
+<div id="p1-c" class="sec-head">Section C — Long Answers (7 × 5 = 35)</div>
+
+<!-- Q3a -->
+<div class="q-block" id="q3a-24">
+  <div class="q-head"><span class="q-num">Q3a</span><div class="q-title">Stepwise Project Planning Process</div></div>
+  <div class="q-body">
+    <div class="diagram-wrap">
+      <div class="diagram-title">Stepwise Planning — 9 Steps</div>
+      <svg width="100%" viewBox="0 0 680 560" role="img">
+        <title>Stepwise Project Planning Process</title>
+        <desc>Nine sequential steps of stepwise project planning shown as a vertical flowchart</desc>
+        <defs><marker id="arr4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+        <!-- Step boxes -->
+        <g>
+          <rect x="40" y="10" width="300" height="48" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+          <text x="190" y="30" text-anchor="middle" font-size="13" font-weight="600" fill="#3C3489">Step 0: Select Project</text>
+          <text x="190" y="48" text-anchor="middle" font-size="11" fill="#534AB7">Feasibility study, cost-benefit, strategic fit</text>
+        </g>
+        <line x1="190" y1="58" x2="190" y2="72" stroke="#888780" stroke-width="1" marker-end="url(#arr4)"/>
+        <g>
+          <rect x="40" y="72" width="300" height="48" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+          <text x="190" y="92" text-anchor="middle" font-size="13" font-weight="600" fill="#085041">Step 1: Identify Scope &amp; Objectives</text>
+          <text x="190" y="110" text-anchor="middle" font-size="11" fill="#0F6E56">SMART objectives, boundaries, stakeholders</text>
+        </g>
+        <line x1="190" y1="120" x2="190" y2="134" stroke="#888780" stroke-width="1" marker-end="url(#arr4)"/>
+        <g>
+          <rect x="40" y="134" width="300" height="48" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+          <text x="190" y="154" text-anchor="middle" font-size="13" font-weight="600" fill="#633806">Step 2: Identify Infrastructure</text>
+          <text x="190" y="172" text-anchor="middle" font-size="11" fill="#854F0B">Org structure, standards, tools, procedures</text>
+        </g>
+        <line x1="190" y1="182" x2="190" y2="196" stroke="#888780" stroke-width="1" marker-end="url(#arr4)"/>
+        <g>
+          <rect x="40" y="196" width="300" height="48" rx="8" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.5"/>
+          <text x="190" y="216" text-anchor="middle" font-size="13" font-weight="600" fill="#791F1F">Step 3: Analyze Project Characteristics</text>
+          <text x="190" y="234" text-anchor="middle" font-size="11" fill="#A32D2D">Data-intensive? Real-time? Choose lifecycle model</text>
+        </g>
+        <line x1="190" y1="244" x2="190" y2="258" stroke="#888780" stroke-width="1" marker-end="url(#arr4)"/>
+        <g>
+          <rect x="40" y="258" width="300" height="48" rx="8" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+          <text x="190" y="278" text-anchor="middle" font-size="13" font-weight="600" fill="#27500A">Step 4: Identify Products &amp; Activities (WBS)</text>
+          <text x="190" y="296" text-anchor="middle" font-size="11" fill="#3B6D11">Break into deliverables and activities</text>
+        </g>
+        <line x1="190" y1="306" x2="190" y2="320" stroke="#888780" stroke-width="1" marker-end="url(#arr4)"/>
+        <g>
+          <rect x="40" y="320" width="300" height="48" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+          <text x="190" y="340" text-anchor="middle" font-size="13" font-weight="600" fill="#0C447C">Step 5: Estimate Effort</text>
+          <text x="190" y="358" text-anchor="middle" font-size="11" fill="#185FA5">COCOMO, Function Points, expert judgment</text>
+        </g>
+        <line x1="190" y1="368" x2="190" y2="382" stroke="#888780" stroke-width="1" marker-end="url(#arr4)"/>
+        <g>
+          <rect x="40" y="382" width="300" height="48" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+          <text x="190" y="402" text-anchor="middle" font-size="13" font-weight="600" fill="#712B13">Step 6: Identify Activity Risks</text>
+          <text x="190" y="420" text-anchor="middle" font-size="11" fill="#993C1D">Assess probability &amp; impact; plan responses</text>
+        </g>
+        <line x1="190" y1="430" x2="190" y2="444" stroke="#888780" stroke-width="1" marker-end="url(#arr4)"/>
+        <g>
+          <rect x="40" y="444" width="300" height="48" rx="8" fill="#FBEAF0" stroke="#993556" stroke-width="0.5"/>
+          <text x="190" y="464" text-anchor="middle" font-size="13" font-weight="600" fill="#72243E">Step 7: Allocate Resources</text>
+          <text x="190" y="482" text-anchor="middle" font-size="11" fill="#993556">Assign team; resolve conflicts</text>
+        </g>
+        <line x1="190" y1="492" x2="190" y2="506" stroke="#888780" stroke-width="1" marker-end="url(#arr4)"/>
+        <g>
+          <rect x="40" y="506" width="300" height="48" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+          <text x="190" y="526" text-anchor="middle" font-size="13" font-weight="600" fill="#444441">Step 8: Review &amp; Execute Plan</text>
+          <text x="190" y="544" text-anchor="middle" font-size="11" fill="#5F5E5A">Get stakeholder sign-off; continuous refinement</text>
+        </g>
+        <!-- Side annotations -->
+        <text x="380" y="34" font-size="11" fill="#888780">↑ Pre-project</text>
+        <text x="380" y="158" font-size="11" fill="#888780">↑ Planning phase</text>
+        <text x="380" y="344" font-size="11" fill="#888780">↑ Estimation</text>
+        <text x="380" y="468" font-size="11" fill="#888780">↑ Execution</text>
+      </svg>
+    </div>
+    <h4>Example — University Portal Project:</h4>
+    <ul>
+      <li>Step 1: "Deliver student portal by May 2026, budget ₹20 lakh"</li>
+      <li>Step 4: WBS — Login, Registration, Results, Fee Payment modules</li>
+      <li>Step 5: Login=40hrs, Registration=80hrs, Results=60hrs</li>
+      <li>Step 7: Assign 3 developers + 1 tester + 1 PM</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Q3b -->
+<div class="q-block" id="q3b-24">
+  <div class="q-head"><span class="q-num">Q3b</span><div class="q-title">Risk Evaluation Techniques</div></div>
+  <div class="q-body">
+    <div class="diagram-wrap">
+      <div class="diagram-title">Risk Probability-Impact Matrix</div>
+      <svg width="100%" viewBox="0 0 680 260" role="img">
+        <title>Risk Probability Impact Matrix</title>
+        <desc>3x3 grid showing risk levels from Low to High probability and impact</desc>
+        <!-- Grid -->
+        <text x="340" y="22" text-anchor="middle" font-size="12" font-weight="600" fill="#5F5E5A">IMPACT →</text>
+        <text x="22" y="150" text-anchor="middle" font-size="12" font-weight="600" fill="#5F5E5A" transform="rotate(-90,22,150)">PROBABILITY →</text>
+        <!-- Column headers -->
+        <text x="190" y="46" text-anchor="middle" font-size="11" fill="#5F5E5A">Low</text>
+        <text x="340" y="46" text-anchor="middle" font-size="11" fill="#5F5E5A">Medium</text>
+        <text x="490" y="46" text-anchor="middle" font-size="11" fill="#5F5E5A">High</text>
+        <!-- Row labels -->
+        <text x="55" y="110" text-anchor="middle" font-size="11" fill="#5F5E5A">High</text>
+        <text x="55" y="165" text-anchor="middle" font-size="11" fill="#5F5E5A">Med</text>
+        <text x="55" y="220" text-anchor="middle" font-size="11" fill="#5F5E5A">Low</text>
+        <!-- Cells -->
+        <rect x="80" y="55" width="140" height="55" rx="4" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+        <text x="150" y="87" text-anchor="middle" font-size="12" font-weight="600" fill="#633806">MEDIUM</text>
+        <rect x="230" y="55" width="140" height="55" rx="4" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.5"/>
+        <text x="300" y="87" text-anchor="middle" font-size="12" font-weight="600" fill="#791F1F">HIGH</text>
+        <rect x="380" y="55" width="140" height="55" rx="4" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.8"/>
+        <text x="450" y="87" text-anchor="middle" font-size="12" font-weight="600" fill="#791F1F">CRITICAL</text>
+
+        <rect x="80" y="120" width="140" height="55" rx="4" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+        <text x="150" y="152" text-anchor="middle" font-size="12" font-weight="600" fill="#27500A">LOW</text>
+        <rect x="230" y="120" width="140" height="55" rx="4" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+        <text x="300" y="152" text-anchor="middle" font-size="12" font-weight="600" fill="#633806">MEDIUM</text>
+        <rect x="380" y="120" width="140" height="55" rx="4" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.5"/>
+        <text x="450" y="152" text-anchor="middle" font-size="12" font-weight="600" fill="#791F1F">HIGH</text>
+
+        <rect x="80" y="185" width="140" height="55" rx="4" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+        <text x="150" y="217" text-anchor="middle" font-size="12" font-weight="600" fill="#27500A">NEGLIGIBLE</text>
+        <rect x="230" y="185" width="140" height="55" rx="4" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+        <text x="300" y="217" text-anchor="middle" font-size="12" font-weight="600" fill="#27500A">LOW</text>
+        <rect x="380" y="185" width="140" height="55" rx="4" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+        <text x="450" y="217" text-anchor="middle" font-size="12" font-weight="600" fill="#633806">MEDIUM</text>
+      </svg>
+    </div>
+    <h4>Other Techniques:</h4>
+    <table>
+      <tr><th>Technique</th><th>Description</th><th>Best For</th></tr>
+      <tr><td><strong>Risk Exposure (RE)</strong></td><td>RE = Probability × Impact Cost</td><td>Quantifying monetary risk</td></tr>
+      <tr><td><strong>EMV (Expected Monetary Value)</strong></td><td>EMV = Probability × Monetary Outcome</td><td>Decision tree analysis</td></tr>
+      <tr><td><strong>Monte Carlo Simulation</strong></td><td>Thousands of project simulations; probability distribution of outcomes</td><td>Complex projects</td></tr>
+      <tr><td><strong>Decision Tree Analysis</strong></td><td>Maps decisions and outcomes with probabilities at each branch</td><td>Multiple risk responses</td></tr>
+      <tr><td><strong>FMEA</strong></td><td>Failure Mode and Effects Analysis; RPN = Severity × Occurrence × Detectability</td><td>Safety-critical software</td></tr>
+      <tr><td><strong>Sensitivity Analysis</strong></td><td>Varies one input at a time; Tornado Diagram shows most influential variables</td><td>Identifying key drivers</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- Q4a COCOMO -->
+<div class="q-block" id="q4a-24">
+  <div class="q-head"><span class="q-num">Q4a</span><div class="q-title">COCOMO II Model</div></div>
+  <div class="q-body">
+    <div id="diag-cocomo" class="diagram-wrap">
+      <div class="diagram-title">COCOMO II — Three Sub-Models</div>
+      <svg width="100%" viewBox="0 0 680 200" role="img">
+        <title>COCOMO II Three Sub-Models</title>
+        <desc>Three COCOMO II models: Application Composition, Early Design, Post Architecture</desc>
+        <defs><marker id="arr5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+        <!-- Timeline arrow -->
+        <line x1="40" y1="100" x2="640" y2="100" stroke="#B4B2A9" stroke-width="1.5" marker-end="url(#arr5)"/>
+        <text x="360" y="120" text-anchor="middle" font-size="11" fill="#888780">Project Lifecycle →</text>
+        <!-- Sub-model 1 -->
+        <rect x="50" y="28" width="172" height="60" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+        <text x="136" y="50" text-anchor="middle" font-size="12" font-weight="600" fill="#3C3489">Application Composition</text>
+        <text x="136" y="66" text-anchor="middle" font-size="10" fill="#534AB7">Object Points</text>
+        <text x="136" y="80" text-anchor="middle" font-size="10" fill="#534AB7">Prototyping stage</text>
+        <line x1="136" y1="88" x2="136" y2="100" stroke="#534AB7" stroke-width="0.8"/>
+        <!-- Sub-model 2 -->
+        <rect x="250" y="28" width="172" height="60" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+        <text x="336" y="50" text-anchor="middle" font-size="12" font-weight="600" fill="#085041">Early Design</text>
+        <text x="336" y="66" text-anchor="middle" font-size="10" fill="#0F6E56">Function Points</text>
+        <text x="336" y="80" text-anchor="middle" font-size="10" fill="#0F6E56">High-level design</text>
+        <line x1="336" y1="88" x2="336" y2="100" stroke="#0F6E56" stroke-width="0.8"/>
+        <!-- Sub-model 3 -->
+        <rect x="448" y="28" width="180" height="60" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+        <text x="538" y="50" text-anchor="middle" font-size="12" font-weight="600" fill="#633806">Post-Architecture</text>
+        <text x="538" y="66" text-anchor="middle" font-size="10" fill="#854F0B">SLOC (KSLOC)</text>
+        <text x="538" y="80" text-anchor="middle" font-size="10" fill="#854F0B">17 cost drivers</text>
+        <line x1="538" y1="88" x2="538" y2="100" stroke="#854F0B" stroke-width="0.8"/>
+        <!-- Formula box -->
+        <rect x="80" y="135" width="520" height="52" rx="8" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5"/>
+        <text x="340" y="156" text-anchor="middle" font-size="12" font-weight="600" fill="#444441">Post-Architecture Formula:</text>
+        <text x="340" y="176" text-anchor="middle" font-size="11" fill="#5F5E5A">PM = 2.94 × Size^E × ∏EM     where E = 0.91 + 0.01×ΣSF (5 scale factors)</text>
+      </svg>
+    </div>
+    <h4>5 Scale Factors:</h4>
+    <ol>
+      <li><strong>PREC</strong> — Precedentedness (similar past projects?)</li>
+      <li><strong>FLEX</strong> — Development Flexibility</li>
+      <li><strong>RESL</strong> — Architecture/Risk Resolution</li>
+      <li><strong>TEAM</strong> — Team Cohesion</li>
+      <li><strong>PMAT</strong> — Process Maturity</li>
+    </ol>
+    <h4>17 Cost Drivers (EM) — grouped:</h4>
+    <ul>
+      <li><strong>Product:</strong> reliability, complexity, documentation, database size</li>
+      <li><strong>Platform:</strong> execution time constraint, storage constraint</li>
+      <li><strong>Personnel:</strong> analyst capability, programmer experience, tool familiarity</li>
+      <li><strong>Project:</strong> use of tools, multi-site development, required schedule</li>
+    </ul>
+    <div class="formula">Schedule: TDEV = 3.67 × PM^(0.28 + 0.2×(E-0.91))</div>
+    <p><strong>Example:</strong> 100 KSLOC project, all average factors → PM ≈ 465 person-months</p>
+  </div>
+</div>
+
+<!-- Q4b -->
+<div class="q-block" id="q4b-24">
+  <div class="q-head"><span class="q-num">Q4b</span><div class="q-title">COSMIC Full Function Points</div></div>
+  <div class="q-body">
+    <div class="ref-box">
+      <strong>→ Full detailed explanation:</strong> See <a href="#q2b-22">2022-23 Q2b</a> for complete COSMIC FFP theory and worked example.
+    </div>
+    <h4>Quick Summary:</h4>
+    <table>
+      <tr><th>Data Movement</th><th>Symbol</th><th>Definition</th><th>Example</th></tr>
+      <tr><td>Entry</td><td>E</td><td>Data enters software from user/environment</td><td>User submits a form</td></tr>
+      <tr><td>Exit</td><td>X</td><td>Data leaves software to user/environment</td><td>Displaying a report</td></tr>
+      <tr><td>Read</td><td>R</td><td>Software reads from persistent storage</td><td>Fetching DB record</td></tr>
+      <tr><td>Write</td><td>W</td><td>Software writes to persistent storage</td><td>Saving DB record</td></tr>
+    </table>
+    <p><strong>Each data movement = 1 CFP (COSMIC Function Point)</strong></p>
+    <div class="formula">Effort = Total CFP × (hours per CFP from historical data)</div>
+  </div>
+</div>
+
+<!-- Q5a Scheduling -->
+<div class="q-block" id="q5a-24">
+  <div class="q-head"><span class="q-num">Q5a</span><div class="q-title">Project Scheduling Techniques &amp; Network Models</div></div>
+  <div class="q-body">
+    <h4>Scheduling Techniques:</h4>
+    <table>
+      <tr><th>Technique</th><th>Type</th><th>Best For</th></tr>
+      <tr><td><strong>Gantt Chart</strong></td><td>Bar chart</td><td>Simple visualization; task durations</td></tr>
+      <tr><td><strong>CPM</strong></td><td>Network (deterministic)</td><td>Fixed durations; find critical path</td></tr>
+      <tr><td><strong>PERT</strong></td><td>Network (probabilistic)</td><td>Uncertain durations; R&amp;D projects</td></tr>
+      <tr><td><strong>WBS</strong></td><td>Hierarchy</td><td>Breaking scope into manageable tasks</td></tr>
+      <tr><td><strong>Resource Histogram</strong></td><td>Bar chart</td><td>Resource utilization over time</td></tr>
+      <tr><td><strong>Milestone Chart</strong></td><td>Simple timeline</td><td>Executive reporting</td></tr>
+    </table>
+    <h4>How Network Models Are Used:</h4>
+    <ol>
+      <li>List all activities with durations and dependencies</li>
+      <li>Draw network diagram (AON — Activity on Node)</li>
+      <li><strong>Forward Pass</strong> → ES (Earliest Start) and EF (Earliest Finish)</li>
+      <li><strong>Backward Pass</strong> → LS (Latest Start) and LF (Latest Finish)</li>
+      <li><strong>Float = LS − ES</strong> (zero float = critical activity)</li>
+      <li>Critical Path = longest path = minimum project duration</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Q5b CPM -->
+<div class="q-block" id="q5b-24">
+  <div class="q-head"><span class="q-num">Q5b</span><div class="q-title">Critical Path Method (CPM)</div></div>
+  <div class="q-body">
+    <h4>Key Concepts:</h4>
+    <table>
+      <tr><th>Term</th><th>Formula</th><th>Meaning</th></tr>
+      <tr><td>ES (Earliest Start)</td><td>From forward pass</td><td>Earliest an activity can begin</td></tr>
+      <tr><td>EF (Earliest Finish)</td><td>ES + Duration</td><td>Earliest an activity can end</td></tr>
+      <tr><td>LS (Latest Start)</td><td>From backward pass</td><td>Latest start without delaying project</td></tr>
+      <tr><td>LF (Latest Finish)</td><td>LS + Duration</td><td>Latest end without delaying project</td></tr>
+      <tr><td>Total Float</td><td>LS − ES = LF − EF</td><td>Slack available; 0 = critical</td></tr>
+    </table>
+    <h4>Activity Node Structure:</h4>
+    <div class="formula">┌──────────────────────────┐
+│  ES  │ Duration │  EF    │
+│──────────────────────────│
+│       Activity Name       │
+│──────────────────────────│
+│  LS  │  Float   │  LF    │
+└──────────────────────────┘</div>
+    <h4>How CPM Identifies Bottlenecks:</h4>
+    <ul>
+      <li>Activities on critical path are <strong>bottlenecks</strong> — delay = project delay</li>
+      <li>Near-critical activities (low float) need close monitoring</li>
+      <li><strong>Resource leveling</strong> — shift resources from high-float to critical activities</li>
+      <li><strong>Crashing</strong> — add resources to critical path to shorten duration</li>
+      <li><strong>Fast-tracking</strong> — do critical activities in parallel</li>
+    </ul>
+    <div class="ref-box">
+      <strong>→ Fully worked numerical CPM examples:</strong><br>
+      2023-24 network (8 activities, A–H) → <a href="#q5b-23">See Q5b 2023-24</a><br>
+      2022-23 network (8 activities, A–H different set) → <a href="#q5a-22">See Q5a 2022-23</a>
+    </div>
+  </div>
+</div>
+
+<!-- Q6a Framework -->
+<div class="q-block" id="q6a-24">
+  <div class="q-head"><span class="q-num">Q6a</span><div class="q-title">Framework for Managing and Controlling Software Projects</div></div>
+  <div class="q-body">
+    <div class="diagram-wrap">
+      <div class="diagram-title">Management &amp; Control Framework</div>
+      <svg width="100%" viewBox="0 0 680 220" role="img">
+        <title>Software Project Management and Control Framework</title>
+        <desc>Five components: Planning, Monitoring, Control, Communication, Quality arranged around central framework</desc>
+        <defs><marker id="arr6" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+        <!-- Centre -->
+        <rect x="250" y="80" width="180" height="60" rx="10" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+        <text x="340" y="105" text-anchor="middle" font-size="13" font-weight="600" fill="#3C3489">Project Control</text>
+        <text x="340" y="123" text-anchor="middle" font-size="11" fill="#534AB7">Framework</text>
+        <!-- Surrounding -->
+        <rect x="20" y="10" width="150" height="54" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+        <text x="95" y="33" text-anchor="middle" font-size="12" font-weight="600" fill="#085041">Planning</text>
+        <text x="95" y="52" text-anchor="middle" font-size="10" fill="#0F6E56">Baselines; risk plan</text>
+        <line x1="170" y1="37" x2="248" y2="100" stroke="#0F6E56" stroke-width="0.8" marker-end="url(#arr6)"/>
+
+        <rect x="20" y="155" width="150" height="54" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+        <text x="95" y="178" text-anchor="middle" font-size="12" font-weight="600" fill="#633806">Monitoring</text>
+        <text x="95" y="196" text-anchor="middle" font-size="10" fill="#854F0B">EVM; status reports</text>
+        <line x1="170" y1="182" x2="248" y2="145" stroke="#854F0B" stroke-width="0.8" marker-end="url(#arr6)"/>
+
+        <rect x="510" y="10" width="150" height="54" rx="8" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.5"/>
+        <text x="585" y="33" text-anchor="middle" font-size="12" font-weight="600" fill="#791F1F">Change Control</text>
+        <text x="585" y="52" text-anchor="middle" font-size="10" fill="#A32D2D">CCB; change orders</text>
+        <line x1="510" y1="37" x2="432" y2="100" stroke="#A32D2D" stroke-width="0.8" marker-end="url(#arr6)"/>
+
+        <rect x="510" y="155" width="150" height="54" rx="8" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+        <text x="585" y="178" text-anchor="middle" font-size="12" font-weight="600" fill="#27500A">Quality Control</text>
+        <text x="585" y="196" text-anchor="middle" font-size="10" fill="#3B6D11">Reviews; testing</text>
+        <line x1="510" y1="182" x2="432" y2="145" stroke="#3B6D11" stroke-width="0.8" marker-end="url(#arr6)"/>
+
+        <rect x="265" y="175" width="150" height="40" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+        <text x="340" y="199" text-anchor="middle" font-size="11" font-weight="600" fill="#0C447C">Communication</text>
+        <line x1="340" y1="175" x2="340" y2="142" stroke="#185FA5" stroke-width="0.8" marker-end="url(#arr6)"/>
+      </svg>
+    </div>
+    <h4>Control Cycle:</h4>
+    <div class="formula">Plan → Execute → Monitor → Compare vs Baseline → Corrective Action → Re-plan</div>
+    <h4>Key Components:</h4>
+    <ul>
+      <li><strong>Planning:</strong> Scope, schedule, cost baselines; risk plan; quality plan</li>
+      <li><strong>Monitoring:</strong> Status meetings, EVM tracking, milestone reviews, dashboards</li>
+      <li><strong>Change Control:</strong> CCB approves/rejects changes; issue log; corrective actions</li>
+      <li><strong>Communication:</strong> Stakeholder reports; escalation procedures</li>
+      <li><strong>Quality:</strong> Code reviews, testing, defect tracking, audits</li>
+      <li><strong>Risk Monitoring:</strong> Regular risk register reviews</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Q6b Contracts -->
+<div class="q-block" id="q6b-24">
+  <div class="q-head"><span class="q-num">Q6b</span><div class="q-title">Management Contracts &amp; Contract Management</div></div>
+  <div class="q-body">
+    <h4>Types of Contracts:</h4>
+    <table>
+      <tr><th>Contract Type</th><th>Risk Bearer</th><th>Best For</th></tr>
+      <tr><td>Fixed Price (Lump Sum)</td><td>Vendor</td><td>Well-defined scope</td></tr>
+      <tr><td>Time &amp; Material (T&amp;M)</td><td>Client</td><td>Evolving requirements</td></tr>
+      <tr><td>Cost Plus Fixed Fee (CPFF)</td><td>Shared</td><td>R&amp;D projects</td></tr>
+      <tr><td>Cost Plus Incentive Fee (CPIF)</td><td>Shared</td><td>Performance-driven projects</td></tr>
+    </table>
+    <h4>Importance in Project Control:</h4>
+    <ol>
+      <li><strong>Scope Control</strong> — contract defines deliverables; prevents scope creep</li>
+      <li><strong>Budget Control</strong> — payment tied to milestones; controls spending</li>
+      <li><strong>Schedule Control</strong> — penalties/incentives for early/late delivery</li>
+      <li><strong>Legal Protection</strong> — recourse if vendor or client defaults</li>
+      <li><strong>Change Management</strong> — formal change order process</li>
+      <li><strong>Quality Standards</strong> — specifies acceptance criteria</li>
+      <li><strong>Dispute Resolution</strong> — defined escalation and arbitration procedures</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Q7a OB Staffing -->
+<div class="q-block" id="q7a-24">
+  <div class="q-head"><span class="q-num">Q7a</span><div class="q-title">Organizational Behavior Approach to Staffing &amp; Team Dynamics</div></div>
+  <div class="q-body">
+    <h4>Key OB Theories Applied to SPM:</h4>
+    <table>
+      <tr><th>Theory</th><th>Author</th><th>Application to SPM</th></tr>
+      <tr><td>Maslow's Hierarchy</td><td>Maslow</td><td>Meet physiological → self-actualization needs of developers</td></tr>
+      <tr><td>Two-Factor Theory</td><td>Herzberg</td><td>Hygiene (salary, conditions) + Motivators (achievement, recognition)</td></tr>
+      <tr><td>Theory X &amp; Y</td><td>McGregor</td><td>Theory Y (trust, autonomy) works better for software teams</td></tr>
+      <tr><td>Tuckman's Stages</td><td>Tuckman</td><td>Forming→Storming→Norming→Performing→Adjourning</td></tr>
+    </table>
+    <h4>Team Structures in Software:</h4>
+    <ul>
+      <li><strong>Chief Programmer Team</strong> — one expert leads; efficient for small critical modules</li>
+      <li><strong>Egoless/Democratic Team</strong> — peer review; shared responsibility; quality-focused</li>
+      <li><strong>Matrix Team</strong> — functional + project managers; common in large organizations</li>
+    </ul>
+    <h4>OB Impact on Performance:</h4>
+    <ul>
+      <li>Group dynamics — cohesive teams outperform collections of individuals</li>
+      <li>Conflict management — use Thomas-Kilmann model: Collaborate &gt; Compromise</li>
+      <li>Leadership styles — Agile needs servant leadership; Traditional needs transactional</li>
+      <li>Decision biases — OB identifies heuristics and escalation of commitment traps</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Q7b Hackman-Oldham -->
+<div class="q-block" id="q7b-24">
+  <div class="q-head"><span class="q-num">Q7b</span><div class="q-title">Oldham-Hackman Job Characteristics Model</div></div>
+  <div class="q-body">
+    <div id="diag-hackman" class="diagram-wrap">
+      <div class="diagram-title">Hackman-Oldham Job Characteristics Model</div>
+      <svg width="100%" viewBox="0 0 680 260" role="img">
+        <title>Hackman Oldham Job Characteristics Model</title>
+        <desc>Five core job dimensions lead to three psychological states which lead to outcomes</desc>
+        <defs><marker id="arr7" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+        <!-- Column 1: Core dimensions -->
+        <text x="100" y="20" text-anchor="middle" font-size="11" font-weight="600" fill="#5F5E5A">CORE JOB DIMENSIONS</text>
+        <rect x="20" y="28" width="160" height="36" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+        <text x="100" y="50" text-anchor="middle" font-size="11" font-weight="600" fill="#3C3489">Skill Variety</text>
+        <rect x="20" y="70" width="160" height="36" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+        <text x="100" y="92" text-anchor="middle" font-size="11" font-weight="600" fill="#3C3489">Task Identity</text>
+        <rect x="20" y="112" width="160" height="36" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+        <text x="100" y="134" text-anchor="middle" font-size="11" font-weight="600" fill="#3C3489">Task Significance</text>
+        <rect x="20" y="162" width="160" height="36" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+        <text x="100" y="184" text-anchor="middle" font-size="11" font-weight="600" fill="#085041">Autonomy</text>
+        <rect x="20" y="206" width="160" height="36" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+        <text x="100" y="228" text-anchor="middle" font-size="11" font-weight="600" fill="#633806">Feedback</text>
+
+        <!-- Arrows to column 2 -->
+        <line x1="180" y1="64" x2="250" y2="80" stroke="#534AB7" stroke-width="0.8" marker-end="url(#arr7)"/>
+        <line x1="180" y1="88" x2="250" y2="88" stroke="#534AB7" stroke-width="0.8" marker-end="url(#arr7)"/>
+        <line x1="180" y1="130" x2="250" y2="96" stroke="#534AB7" stroke-width="0.8" marker-end="url(#arr7)"/>
+        <line x1="180" y1="180" x2="250" y2="145" stroke="#0F6E56" stroke-width="0.8" marker-end="url(#arr7)"/>
+        <line x1="180" y1="224" x2="250" y2="195" stroke="#854F0B" stroke-width="0.8" marker-end="url(#arr7)"/>
+
+        <!-- Column 2: Psychological states -->
+        <text x="360" y="20" text-anchor="middle" font-size="11" font-weight="600" fill="#5F5E5A">PSYCHOLOGICAL STATES</text>
+        <rect x="252" y="60" width="210" height="50" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+        <text x="357" y="80" text-anchor="middle" font-size="11" font-weight="600" fill="#085041">Experienced Meaningfulness</text>
+        <text x="357" y="98" text-anchor="middle" font-size="10" fill="#0F6E56">(Variety + Identity + Significance)</text>
+        <rect x="252" y="122" width="210" height="42" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+        <text x="357" y="147" text-anchor="middle" font-size="11" font-weight="600" fill="#085041">Experienced Responsibility</text>
+        <rect x="252" y="176" width="210" height="42" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+        <text x="357" y="201" text-anchor="middle" font-size="11" font-weight="600" fill="#085041">Knowledge of Results</text>
+
+        <!-- Arrows to column 3 -->
+        <line x1="462" y1="85" x2="502" y2="105" stroke="#0F6E56" stroke-width="0.8" marker-end="url(#arr7)"/>
+        <line x1="462" y1="143" x2="502" y2="125" stroke="#0F6E56" stroke-width="0.8" marker-end="url(#arr7)"/>
+        <line x1="462" y1="197" x2="502" y2="168" stroke="#0F6E56" stroke-width="0.8" marker-end="url(#arr7)"/>
+
+        <!-- Column 3: Outcomes -->
+        <text x="590" y="20" text-anchor="middle" font-size="11" font-weight="600" fill="#5F5E5A">OUTCOMES</text>
+        <rect x="504" y="60" width="158" height="36" rx="6" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+        <text x="583" y="82" text-anchor="middle" font-size="11" font-weight="600" fill="#27500A">High Motivation</text>
+        <rect x="504" y="104" width="158" height="36" rx="6" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+        <text x="583" y="126" text-anchor="middle" font-size="11" font-weight="600" fill="#27500A">High Performance</text>
+        <rect x="504" y="148" width="158" height="36" rx="6" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+        <text x="583" y="170" text-anchor="middle" font-size="11" font-weight="600" fill="#27500A">High Satisfaction</text>
+        <rect x="504" y="192" width="158" height="36" rx="6" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.5"/>
+        <text x="583" y="214" text-anchor="middle" font-size="11" font-weight="600" fill="#791F1F">Low Absenteeism</text>
+      </svg>
+    </div>
+    <h4>MPS Formula:</h4>
+    <div class="formula">MPS = [(Skill Variety + Task Identity + Task Significance) / 3] × Autonomy × Feedback</div>
+    <h4>SPM Application:</h4>
+    <table>
+      <tr><th>Dimension</th><th>SPM Example</th></tr>
+      <tr><td>Skill Variety</td><td>Developer codes, tests, and documents own module</td></tr>
+      <tr><td>Task Identity</td><td>Developer owns complete module from design to deployment</td></tr>
+      <tr><td>Task Significance</td><td>Building hospital management software — impacts patient care</td></tr>
+      <tr><td>Autonomy</td><td>Self-organizing Agile sprint team decides how to do the work</td></tr>
+      <tr><td>Feedback</td><td>Automated test results, CI/CD pipeline, code reviews, daily standups</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PAPER 2 — 2023-24
+══════════════════════════════════════════════════════════ -->
+<div class="paper-banner p2">📄 Paper 2 — 2023-24 (KOE068) | 100 Marks</div>
+
+<div id="p2-a" class="sec-head">Section A — Short Answers (2 × 10 = 20)</div>
+
+<!-- Q1a Define Project -->
+<div class="q-block" id="q1a-23">
+  <div class="q-head"><span class="q-num p2">Q1a</span><div class="q-title">Define Project with Example</div></div>
+  <div class="q-body">
+    <p>A <strong>project</strong> is a temporary, unique endeavor undertaken to create a specific product, service, or result with a defined beginning and end.</p>
+    <h4>Characteristics: TURP</h4>
+    <ul>
+      <li><strong>Temporary</strong> — defined start and end</li>
+      <li><strong>Unique</strong> output — not routine work</li>
+      <li><strong>Resource-constrained</strong> — budget, time, people</li>
+      <li><strong>Progressive elaboration</strong> — developed step by step</li>
+    </ul>
+    <p><strong>Example:</strong> "Developing a mobile banking app for XYZ Bank by December 2025 with a budget of ₹20 lakhs" — has a start date, end date, specific deliverable, and assigned budget.</p>
+  </div>
+</div>
+
+<!-- Q1b Types of Projects -->
+<div class="q-block" id="q1b-23">
+  <div class="q-head"><span class="q-num p2">Q1b</span><div class="q-title">Types of Projects</div></div>
+  <div class="q-body">
+    <ol>
+      <li><strong>Engineering/Construction</strong> — bridges, buildings, infrastructure</li>
+      <li><strong>IT/Software Projects</strong> — application development, system integration</li>
+      <li><strong>Research Projects</strong> — R&amp;D, scientific investigation</li>
+      <li><strong>Product Development</strong> — creating new commercial products</li>
+      <li><strong>Organizational Change</strong> — restructuring, ERP implementation</li>
+      <li><strong>Event Management</strong> — conferences, product launches</li>
+      <li><strong>Infrastructure Projects</strong> — network setup, data center deployment</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Q1c Waterfall Limitations -->
+<div class="q-block" id="q1c-23">
+  <div class="q-head"><span class="q-num p2">Q1c</span><div class="q-title">Limitations of Waterfall Model</div></div>
+  <div class="q-body">
+    <ol>
+      <li><strong>No flexibility</strong> — requirements must be fixed upfront; poor for evolving needs</li>
+      <li><strong>Late testing</strong> — defects found late are exponentially more expensive to fix</li>
+      <li><strong>Customer sees product only at end</strong> — no intermediate feedback loop</li>
+      <li><strong>Poor for large complex projects</strong> with unclear requirements</li>
+      <li><strong>Sequential phases</strong> — next phase can't start until previous completes (slow)</li>
+      <li><strong>Poor risk management</strong> — risks surface very late in the cycle</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Q1d Parametric Model -->
+<div class="q-block" id="q1d-23">
+  <div class="q-head"><span class="q-num p2">Q1d</span><div class="q-title">Parametric Model for Effort Estimation</div></div>
+  <div class="q-body">
+    <p>A <strong>parametric model</strong> uses mathematical relationships between project parameters and effort.</p>
+    <div class="formula">General form: Effort = a × (Size)^b × Adjustment Factors</div>
+    <h4>Examples:</h4>
+    <ul>
+      <li><strong>COCOMO Basic:</strong> Effort = 2.4 × KLOC^1.05 (Organic mode)</li>
+      <li><strong>COCOMO II:</strong> PM = 2.94 × Size^E × ∏EM</li>
+      <li><strong>Function Point-based:</strong> Effort = FP × productivity_factor</li>
+    </ul>
+    <p>Parameters used: lines of code, function points, complexity, team capability.</p>
+  </div>
+</div>
+
+<!-- Q1e Critical Path -->
+<div class="q-block" id="q1e-23">
+  <div class="q-head"><span class="q-num p2">Q1e</span><div class="q-title">Critical Path in Software Project Development</div></div>
+  <div class="q-body">
+    <p>The <strong>Critical Path</strong> is the longest sequence of dependent activities from project start to finish. It determines the <strong>minimum project duration</strong>.</p>
+    <ul>
+      <li>Activities on critical path have <strong>zero float</strong> — cannot be delayed</li>
+      <li>Any delay on critical path = project delay</li>
+      <li>Found using forward and backward pass in CPM</li>
+    </ul>
+    <div class="ref-box"><strong>→ Full worked CPM examples:</strong> <a href="#q5b-23">2023-24 Q5b</a> and <a href="#q5a-22">2022-23 Q5a</a></div>
+  </div>
+</div>
+
+<!-- Q1f Activity Node -->
+<div class="q-block" id="q1f-23">
+  <div class="q-head"><span class="q-num p2">Q1f</span><div class="q-title">Structure of Activity Node in Activity Network</div></div>
+  <div class="q-body">
+    <div class="diagram-wrap">
+      <svg width="100%" viewBox="0 0 680 130" role="img">
+        <title>Activity Node Structure in AON Network</title>
+        <desc>A standard Activity on Node box showing ES, Duration, EF in top row, Activity Name in middle, LS, Float, LF in bottom row</desc>
+        <rect x="190" y="10" width="300" height="110" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+        <line x1="190" y1="48" x2="490" y2="48" stroke="#185FA5" stroke-width="0.5"/>
+        <line x1="190" y1="78" x2="490" y2="78" stroke="#185FA5" stroke-width="0.5"/>
+        <line x1="290" y1="10" x2="290" y2="48" stroke="#185FA5" stroke-width="0.5"/>
+        <line x1="390" y1="10" x2="390" y2="48" stroke="#185FA5" stroke-width="0.5"/>
+        <line x1="290" y1="78" x2="290" y2="120" stroke="#185FA5" stroke-width="0.5"/>
+        <line x1="390" y1="78" x2="390" y2="120" stroke="#185FA5" stroke-width="0.5"/>
+        <text x="240" y="33" text-anchor="middle" font-size="13" font-weight="600" fill="#0C447C">ES</text>
+        <text x="340" y="33" text-anchor="middle" font-size="13" font-weight="600" fill="#0C447C">Duration</text>
+        <text x="440" y="33" text-anchor="middle" font-size="13" font-weight="600" fill="#0C447C">EF</text>
+        <text x="340" y="67" text-anchor="middle" font-size="13" font-weight="600" fill="#042C53">Activity Name</text>
+        <text x="240" y="103" text-anchor="middle" font-size="13" font-weight="600" fill="#0C447C">LS</text>
+        <text x="340" y="103" text-anchor="middle" font-size="13" font-weight="600" fill="#0C447C">Float</text>
+        <text x="440" y="103" text-anchor="middle" font-size="13" font-weight="600" fill="#0C447C">LF</text>
+      </svg>
+    </div>
+    <ul>
+      <li><strong>ES</strong> = Earliest Start | <strong>EF</strong> = ES + Duration</li>
+      <li><strong>LS</strong> = Latest Start | <strong>LF</strong> = LS + Duration</li>
+      <li><strong>Float</strong> = LS − ES (zero on critical path)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Q1g SCM Activities -->
+<div class="q-block" id="q1g-23">
+  <div class="q-head"><span class="q-num p2">Q1g</span><div class="q-title">Activities under Software Configuration Management (SCM)</div></div>
+  <div class="q-body">
+    <ol>
+      <li><strong>Configuration Identification</strong> — identify all items to be controlled (baselines)</li>
+      <li><strong>Configuration Control</strong> — manage changes via Change Control Board (CCB)</li>
+      <li><strong>Configuration Status Accounting</strong> — record and report status of all config items</li>
+      <li><strong>Configuration Auditing</strong> — verify completeness and correctness of baselines</li>
+      <li><strong>Build Management</strong> — manage compilation and build process (CI/CD)</li>
+      <li><strong>Release Management</strong> — control software releases to users</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Q1h Change Control -->
+<div class="q-block" id="q1h-23">
+  <div class="q-head"><span class="q-num p2">Q1h</span><div class="q-title">Change Control Process in Software Project</div></div>
+  <div class="q-body">
+    <div class="diagram-wrap">
+      <div class="diagram-title">Change Control Process Flow</div>
+      <svg width="100%" viewBox="0 0 680 80" role="img">
+        <title>Change Control Process Steps</title>
+        <desc>Seven steps: Submit, Assess, Review, Approve/Reject, Implement, Verify, Close</desc>
+        <defs><marker id="arr8" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+        <rect x="2" y="16" width="82" height="44" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+        <text x="43" y="34" text-anchor="middle" font-size="10" font-weight="600" fill="#3C3489">Submit</text>
+        <text x="43" y="50" text-anchor="middle" font-size="9" fill="#534AB7">Request</text>
+        <line x1="84" y1="38" x2="98" y2="38" stroke="#534AB7" stroke-width="1" marker-end="url(#arr8)"/>
+        <rect x="98" y="16" width="82" height="44" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+        <text x="139" y="34" text-anchor="middle" font-size="10" font-weight="600" fill="#085041">Assess</text>
+        <text x="139" y="50" text-anchor="middle" font-size="9" fill="#0F6E56">Impact</text>
+        <line x1="180" y1="38" x2="194" y2="38" stroke="#0F6E56" stroke-width="1" marker-end="url(#arr8)"/>
+        <rect x="194" y="16" width="82" height="44" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+        <text x="235" y="34" text-anchor="middle" font-size="10" font-weight="600" fill="#633806">Review</text>
+        <text x="235" y="50" text-anchor="middle" font-size="9" fill="#854F0B">CCB</text>
+        <line x1="276" y1="38" x2="290" y2="38" stroke="#854F0B" stroke-width="1" marker-end="url(#arr8)"/>
+        <rect x="290" y="16" width="82" height="44" rx="6" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.5"/>
+        <text x="331" y="34" text-anchor="middle" font-size="10" font-weight="600" fill="#791F1F">Approve /</text>
+        <text x="331" y="50" text-anchor="middle" font-size="9" fill="#A32D2D">Reject</text>
+        <line x1="372" y1="38" x2="386" y2="38" stroke="#A32D2D" stroke-width="1" marker-end="url(#arr8)"/>
+        <rect x="386" y="16" width="82" height="44" rx="6" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+        <text x="427" y="34" text-anchor="middle" font-size="10" font-weight="600" fill="#27500A">Implement</text>
+        <text x="427" y="50" text-anchor="middle" font-size="9" fill="#3B6D11">Changes</text>
+        <line x1="468" y1="38" x2="482" y2="38" stroke="#3B6D11" stroke-width="1" marker-end="url(#arr8)"/>
+        <rect x="482" y="16" width="82" height="44" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+        <text x="523" y="34" text-anchor="middle" font-size="10" font-weight="600" fill="#0C447C">Verify</text>
+        <text x="523" y="50" text-anchor="middle" font-size="9" fill="#185FA5">Correct?</text>
+        <line x1="564" y1="38" x2="578" y2="38" stroke="#185FA5" stroke-width="1" marker-end="url(#arr8)"/>
+        <rect x="578" y="16" width="94" height="44" rx="6" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+        <text x="625" y="34" text-anchor="middle" font-size="10" font-weight="600" fill="#444441">Close</text>
+        <text x="625" y="50" text-anchor="middle" font-size="9" fill="#5F5E5A">Update docs</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- Q1i Job Enlargement -->
+<div class="q-block" id="q1i-23">
+  <div class="q-head"><span class="q-num p2">Q1i</span><div class="q-title">Job Enlargement</div></div>
+  <div class="q-body">
+    <p><strong>Job Enlargement</strong> is a <em>horizontal expansion</em> — adding more tasks of the <strong>same level</strong> of difficulty to an existing role.</p>
+    <table>
+      <tr><th></th><th>Job Enlargement</th><th>Job Enrichment</th></tr>
+      <tr><td>Direction</td><td>Horizontal (same level)</td><td>Vertical (higher responsibility)</td></tr>
+      <tr><td>Goal</td><td>Reduce monotony, add variety</td><td>Increase motivation, autonomy</td></tr>
+      <tr><td>Example</td><td>Tester also writes test cases + reports</td><td>Tester also plans test strategy</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- Q1j Organizational Behavior -->
+<div class="q-block" id="q1j-23">
+  <div class="q-head"><span class="q-num p2">Q1j</span><div class="q-title">Organizational Behavior</div></div>
+  <div class="q-body">
+    <div class="ref-box"><strong>→ Full detailed answer:</strong> See <a href="#q7a-24">2024-25 Q7a</a> — Organizational Behavior Approach to Staffing &amp; Team Dynamics.</div>
+    <p>OB is the study of how individuals, groups, and structures affect behavior within organizations. It helps understand motivation, leadership, communication, and conflict resolution to improve project outcomes.</p>
+  </div>
+</div>
+
+<!-- ───── Section B ───── -->
+<div id="p2-b" class="sec-head">Section B — Medium Answers (10 × 3 = 30)</div>
+
+<!-- Q2a DCF -->
+<div class="q-block" id="q2a-23">
+  <div class="q-head"><span class="q-num p2">Q2a</span><div class="q-title">Why DCF is Better than Net Profit or ROI for Project Selection</div></div>
+  <div class="q-body">
+    <h4>Core Issue — Time Value of Money:</h4>
+    <p>₹1 today is worth more than ₹1 in 5 years because money can be invested. Net Profit and ROI <em>ignore when</em> money is received.</p>
+    <h4>Limitations of Net Profit:</h4>
+    <ul>
+      <li>Simply sums inflows − outflows</li>
+      <li>Treats ₹10L in year 1 the same as ₹10L in year 10</li>
+      <li>Cannot compare projects with different durations</li>
+    </ul>
+    <h4>Limitations of ROI:</h4>
+    <ul>
+      <li>ROI = (Total Profit / Investment) × 100</li>
+      <li>50% ROI over 10 years may be worse than 40% ROI over 3 years</li>
+    </ul>
+    <h4>Why DCF / NPV is Superior:</h4>
+    <div class="formula">PV = CF_t / (1 + r)^t        NPV = Σ PV − Initial Investment</div>
+    <ul>
+      <li>Discounts future cash flows to present value</li>
+      <li>Projects with <strong>positive NPV</strong> create value; higher NPV = better project</li>
+      <li>Accounts for: inflation, opportunity cost, risk (via discount rate)</li>
+      <li>Allows comparison of projects with <strong>different time horizons</strong></li>
+    </ul>
+    <div class="highlight"><strong>Rule:</strong> Accept projects with NPV &gt; 0. Between alternatives, choose highest NPV.</div>
+  </div>
+</div>
+
+<!-- Q2b Function Points -->
+<div class="q-block" id="q2b-23">
+  <div class="q-head"><span class="q-num p2">Q2b</span><div class="q-title">Function Point Calculation</div></div>
+  <div class="q-body">
+    <h4>Given Data:</h4>
+    <ul>
+      <li>User Inputs (EI) = 30, weight (avg) = 10</li>
+      <li>User Outputs (EO) = 42, weight (avg) = 7</li>
+      <li>User Enquiries (EQ) = 8, weight (avg) = 4</li>
+      <li>Internal Files (ILF) = 7, weight (avg) = 5</li>
+      <li>External Interfaces (EIF) = 6, weight (avg) = 4</li>
+    </ul>
+    <h4>Step 1: Unadjusted Function Points (UFP)</h4>
+    <table>
+      <tr><th>Component</th><th>Count</th><th>Avg Weight</th><th>Subtotal</th></tr>
+      <tr><td>External Inputs (EI)</td><td>30</td><td>10</td><td><strong>300</strong></td></tr>
+      <tr><td>External Outputs (EO)</td><td>42</td><td>7</td><td><strong>294</strong></td></tr>
+      <tr><td>External Inquiries (EQ)</td><td>8</td><td>4</td><td><strong>32</strong></td></tr>
+      <tr><td>Internal Logical Files (ILF)</td><td>7</td><td>5</td><td><strong>35</strong></td></tr>
+      <tr><td>External Interface Files (EIF)</td><td>6</td><td>4</td><td><strong>24</strong></td></tr>
+      <tr><td colspan="3"><strong>UFP Total</strong></td><td><strong>685</strong></td></tr>
+    </table>
+    <h4>Step 2: Value Adjustment Factor (VAF)</h4>
+    <p>All 14 general system characteristics rated "moderate" = 3 each</p>
+    <div class="formula">TDI = 14 × 3 = 42        VAF = 0.65 + (0.01 × 42) = 1.07</div>
+    <h4>Step 3: Adjusted Function Points</h4>
+    <div class="formula">AFP = UFP × VAF = 685 × 1.07 = <strong>733 Function Points</strong></div>
+  </div>
+</div>
+
+<!-- Q2c Project Scheduling -->
+<div class="q-block" id="q2c-23">
+  <div class="q-head"><span class="q-num p2">Q2c</span><div class="q-title">Project Scheduling</div></div>
+  <div class="q-body">
+    <div class="ref-box"><strong>→ Scheduling techniques diagram:</strong> See <a href="#q5a-24">2024-25 Q5a</a> for full coverage. CPM worked example in <a href="#q5b-23">Q5b below</a>.</div>
+    <h4>Key Scheduling Process:</h4>
+    <ol>
+      <li><strong>Define Activities</strong> — decompose WBS into schedule activities</li>
+      <li><strong>Sequence Activities</strong> — identify dependencies (FS, SS, FF, SF)</li>
+      <li><strong>Estimate Durations</strong> — expert judgment, PERT, parametric</li>
+      <li><strong>Develop Schedule</strong> — apply CPM; create Gantt chart; milestones</li>
+      <li><strong>Establish Baseline</strong> — approved schedule for future comparison</li>
+    </ol>
+    <h4>Example Table:</h4>
+    <table>
+      <tr><th>Activity</th><th>Duration</th><th>Predecessor</th></tr>
+      <tr><td>Requirements</td><td>2 wks</td><td>—</td></tr>
+      <tr><td>Design</td><td>3 wks</td><td>Requirements</td></tr>
+      <tr><td>Coding</td><td>5 wks</td><td>Design</td></tr>
+      <tr><td>Testing</td><td>2 wks</td><td>Coding</td></tr>
+      <tr><td>Deployment</td><td>1 wk</td><td>Testing</td></tr>
+      <tr><td><strong>Total (Critical Path)</strong></td><td><strong>13 wks</strong></td><td></td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- Q2d SCM -->
+<div class="q-block" id="q2d-23">
+  <div class="q-head"><span class="q-num p2">Q2d</span><div class="q-title">Software Configuration Management (SCM)</div></div>
+  <div class="q-body">
+    <div class="ref-box"><strong>→ SCM activities already answered in:</strong> <a href="#q1g-23">Q1g (this paper)</a> — for short. Extended answer below.</div>
+    <h4>Key Concepts:</h4>
+    <table>
+      <tr><th>Activity</th><th>What it Does</th><th>Tools</th></tr>
+      <tr><td>Configuration Identification</td><td>Labels and baselines all controlled items (code, docs, test cases)</td><td>Git, SVN</td></tr>
+      <tr><td>Configuration Control</td><td>All changes through CCB; formal approval process</td><td>JIRA, Change Mgmt systems</td></tr>
+      <tr><td>Status Accounting</td><td>Records what version is deployed; change history</td><td>Git log, JIRA</td></tr>
+      <tr><td>Auditing</td><td>Functional audit (meets requirements) + Physical audit (correct items in release)</td><td>Reviews, checklists</td></tr>
+      <tr><td>Build Management</td><td>Reproducible builds from source control</td><td>Jenkins, GitHub Actions</td></tr>
+      <tr><td>Release Management</td><td>Controls what goes to Dev/Test/Prod; rollback procedures</td><td>CD pipelines</td></tr>
+    </table>
+    <h4>Why SCM Matters:</h4>
+    <p>Without SCM: lost code, conflicting versions, inability to reproduce bugs, regression defects.<br>
+    With SCM: traceability, stability, auditability, and parallel development.</p>
+  </div>
+</div>
+
+<!-- Q2e OB Role -->
+<div class="q-block" id="q2e-23">
+  <div class="q-head"><span class="q-num p2">Q2e</span><div class="q-title">Role of Organizational Behavior in SPM</div></div>
+  <div class="q-body">
+    <div class="ref-box"><strong>→ Full detailed answer:</strong> See <a href="#q7a-24">2024-25 Q7a</a> — OB Approach to Staffing &amp; Team Dynamics.</div>
+    <h4>Additional Points:</h4>
+    <ul>
+      <li><strong>Group Dynamics</strong> — cohesive teams outperform collections of individuals</li>
+      <li><strong>Decision Making</strong> — OB identifies biases (heuristics, escalation of commitment)</li>
+      <li><strong>Power &amp; Politics</strong> — understanding informal power structures helps PMs navigate organizations</li>
+      <li><strong>Change Management</strong> — Lewin's Change Model (Unfreeze → Change → Refreeze) helps manage transitions</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ───── Section C ───── -->
+<div id="p2-c" class="sec-head">Section C — Long Answers (10 × 5 = 50)</div>
+
+<!-- Q3a Decision -->
+<div class="q-block" id="q3a-23">
+  <div class="q-head"><span class="q-num p2">Q3a</span><div class="q-title">Project Ahead of Schedule — Which Option to Choose?</div></div>
+  <div class="q-body">
+    <h4>Situation: 3 months ahead, 15% under budget. Options:</h4>
+    <ol>
+      <li>Finish early; release team; return budget</li>
+      <li>Use time &amp; budget for more testing</li>
+      <li>Use time &amp; budget for better documentation</li>
+    </ol>
+    <h4>Analysis:</h4>
+    <table>
+      <tr><th>Option</th><th>Pros</th><th>Cons</th></tr>
+      <tr><td>1 — Finish early</td><td>Demonstrates efficiency; releases team</td><td>Missed quality improvement opportunity</td></tr>
+      <tr><td><strong>2 — More testing ✓</strong></td><td>Catches residual defects; reduces post-release cost 10–100×</td><td>Diminishing returns if already well-tested</td></tr>
+      <tr><td>3 — Better documentation</td><td>Reduces long-term maintenance cost</td><td>Less immediate quality impact</td></tr>
+    </table>
+    <div class="highlight"><strong>Recommended: Option 2 (More Testing)</strong><br>
+    Boehm's principle: defect removal before release is cheapest. Every complex system has latent defects. Pareto principle: find the remaining 20% of bugs causing 80% of failures. Option 2 maximizes long-term value.<br>
+    A hybrid of Options 2+3 is also defensible.</div>
+  </div>
+</div>
+
+<!-- Q3b Cash Flow -->
+<div class="q-block" id="q3b-23">
+  <div class="q-head"><span class="q-num p2">Q3b</span><div class="q-title">Cash Flow Analysis — NP, PP, ROI, NPV (Four Projects)</div></div>
+  <div class="q-body">
+    <h4>Given Table:</h4>
+    <table>
+      <tr><th>Year</th><th>Project 1</th><th>Project 2</th><th>Project 3</th><th>Project 4</th></tr>
+      <tr><td>0 (Investment)</td><td>−1,00,000</td><td>−10,00,000</td><td>−1,00,000</td><td>−1,20,000</td></tr>
+      <tr><td>1</td><td>10,000</td><td>2,00,000</td><td>30,000</td><td>30,000</td></tr>
+      <tr><td>2</td><td>10,000</td><td>2,00,000</td><td>30,000</td><td>30,000</td></tr>
+      <tr><td>3</td><td>10,000</td><td>2,00,000</td><td>30,000</td><td>30,000</td></tr>
+      <tr><td>4</td><td>20,000</td><td>2,00,000</td><td>30,000</td><td>30,000</td></tr>
+      <tr><td>5</td><td>1,00,000</td><td>3,00,000</td><td>30,000</td><td>75,000</td></tr>
+    </table>
+
+    <h4>1. Net Profit (NP = Total Inflows − Investment):</h4>
+    <table>
+      <tr><th>Project</th><th>Total Inflows</th><th>Investment</th><th>NP</th></tr>
+      <tr><td>P1</td><td>1,50,000</td><td>1,00,000</td><td><strong>+50,000</strong></td></tr>
+      <tr><td>P2</td><td>11,00,000</td><td>10,00,000</td><td><strong>+1,00,000</strong></td></tr>
+      <tr><td>P3</td><td>1,50,000</td><td>1,00,000</td><td><strong>+50,000</strong></td></tr>
+      <tr><td>P4</td><td>1,95,000</td><td>1,20,000</td><td><strong>+75,000</strong></td></tr>
+    </table>
+
+    <h4>2. Payback Period (PP):</h4>
+    <table>
+      <tr><th>Project</th><th>Calculation</th><th>PP</th></tr>
+      <tr><td>P1</td><td>Cumul after Y4=50,000; need 50,000 more; Y5 gives 1,00,000 → 4 + 50/100</td><td><strong>4.5 years</strong></td></tr>
+      <tr><td>P2</td><td>Y1–Y4 = 8,00,000; need 2,00,000 more; Y5 gives 3,00,000 → 4 + 2/3</td><td><strong>4.67 years</strong></td></tr>
+      <tr><td>P3</td><td>30,000/yr; Y3 cumul=90,000; Y4 cumul=1,20,000 → 3 + 10/30</td><td><strong>3.33 years</strong></td></tr>
+      <tr><td>P4</td><td>30,000/yr; Y1–Y4 = exactly 1,20,000</td><td><strong>4.0 years</strong></td></tr>
+    </table>
+
+    <h4>3. ROI = (NP / Investment) × 100:</h4>
+    <table>
+      <tr><th>Project</th><th>NP</th><th>Investment</th><th>ROI</th></tr>
+      <tr><td>P1</td><td>50,000</td><td>1,00,000</td><td><strong>50%</strong></td></tr>
+      <tr><td>P2</td><td>1,00,000</td><td>10,00,000</td><td><strong>10%</strong></td></tr>
+      <tr><td>P3</td><td>50,000</td><td>1,00,000</td><td><strong>50%</strong></td></tr>
+      <tr><td>P4</td><td>75,000</td><td>1,20,000</td><td><strong>62.5%</strong></td></tr>
+    </table>
+
+    <h4>4. NPV (Discount Rate = 10%)</h4>
+    <p>Discount Factors: Y1=0.909, Y2=0.826, Y3=0.751, Y4=0.683, Y5=0.621</p>
+    <table>
+      <tr><th>Year</th><th>DF</th><th>PV(P1)</th><th>PV(P2)</th><th>PV(P3)</th><th>PV(P4)</th></tr>
+      <tr><td>1</td><td>0.909</td><td>9,090</td><td>1,81,800</td><td>27,270</td><td>27,270</td></tr>
+      <tr><td>2</td><td>0.826</td><td>8,260</td><td>1,65,200</td><td>24,780</td><td>24,780</td></tr>
+      <tr><td>3</td><td>0.751</td><td>7,510</td><td>1,50,200</td><td>22,530</td><td>22,530</td></tr>
+      <tr><td>4</td><td>0.683</td><td>13,660</td><td>1,36,600</td><td>20,490</td><td>20,490</td></tr>
+      <tr><td>5</td><td>0.621</td><td>62,100</td><td>1,86,300</td><td>18,630</td><td>46,575</td></tr>
+      <tr><td><strong>Total PV</strong></td><td></td><td><strong>1,00,620</strong></td><td><strong>8,20,100</strong></td><td><strong>1,13,700</strong></td><td><strong>1,41,645</strong></td></tr>
+      <tr><td><strong>NPV</strong></td><td></td><td><strong>+620</strong></td><td><strong>−1,79,900</strong></td><td><strong>+13,700</strong></td><td><strong>+21,645</strong></td></tr>
+    </table>
+    <div class="highlight">
+      <strong>Summary:</strong> Best project by NPV = <strong>Project 4 (+21,645)</strong> | Best by ROI = <strong>Project 4 (62.5%)</strong><br>
+      <strong>Avoid: Project 2</strong> (negative NPV despite highest nominal profit)
+    </div>
+  </div>
+</div>
+
+<!-- Q4a RAD -->
+<div class="q-block" id="q4a-23">
+  <div class="q-head"><span class="q-num p2">Q4a</span><div class="q-title">Rapid Application Development (RAD) Model</div></div>
+  <div class="q-body">
+    <div class="ref-box"><strong>→ Same as 2024-25 Q2b.</strong> See <a href="#q2b-24">Q2b 2024-25</a> for full answer with diagram. Additional context below.</div>
+    <h4>When to Use RAD:</h4>
+    <ul>
+      <li>Well-defined scope but flexible requirements</li>
+      <li>User actively available for feedback</li>
+      <li>Moderate size (not mega-projects)</li>
+      <li>GUI-driven systems (not embedded/real-time)</li>
+    </ul>
+    <h4>Advantages vs. Disadvantages:</h4>
+    <table>
+      <tr><th>Advantages</th><th>Disadvantages</th></tr>
+      <tr><td>Fast delivery (60–90 days)</td><td>Not for safety-critical systems</td></tr>
+      <tr><td>High user satisfaction</td><td>Needs skilled, small teams</td></tr>
+      <tr><td>Early error detection</td><td>Scope creep risk without control</td></tr>
+      <tr><td>Reusable components</td><td>Poor for large-scale projects</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- Q4b Agile -->
+<div class="q-block" id="q4b-23">
+  <div class="q-head"><span class="q-num p2">Q4b</span><div class="q-title">Agile Methods for Software Development</div></div>
+  <div class="q-body">
+    <div id="diag-agile" class="diagram-wrap">
+      <div class="diagram-title">Scrum Framework — Agile Most Popular Framework</div>
+      <svg width="100%" viewBox="0 0 680 200" role="img">
+        <title>Scrum Agile Framework</title>
+        <desc>Scrum framework showing Product Backlog feeding into Sprint Planning which leads to Sprint which produces Increment</desc>
+        <defs><marker id="arr9" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+        <!-- Product Backlog -->
+        <rect x="10" y="30" width="130" height="140" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+        <text x="75" y="55" text-anchor="middle" font-size="12" font-weight="600" fill="#3C3489">Product</text>
+        <text x="75" y="71" text-anchor="middle" font-size="12" font-weight="600" fill="#3C3489">Backlog</text>
+        <text x="75" y="93" text-anchor="middle" font-size="10" fill="#534AB7">Feature A</text>
+        <text x="75" y="109" text-anchor="middle" font-size="10" fill="#534AB7">Feature B</text>
+        <text x="75" y="125" text-anchor="middle" font-size="10" fill="#534AB7">Feature C</text>
+        <text x="75" y="141" text-anchor="middle" font-size="10" fill="#534AB7">Feature D ...</text>
+        <line x1="140" y1="100" x2="165" y2="100" stroke="#534AB7" stroke-width="1.2" marker-end="url(#arr9)"/>
+        <!-- Sprint Planning -->
+        <rect x="165" y="65" width="120" height="70" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+        <text x="225" y="93" text-anchor="middle" font-size="12" font-weight="600" fill="#085041">Sprint</text>
+        <text x="225" y="109" text-anchor="middle" font-size="12" font-weight="600" fill="#085041">Planning</text>
+        <text x="225" y="125" text-anchor="middle" font-size="10" fill="#0F6E56">(select items)</text>
+        <line x1="285" y1="100" x2="310" y2="100" stroke="#0F6E56" stroke-width="1.2" marker-end="url(#arr9)"/>
+        <!-- Sprint box -->
+        <rect x="310" y="30" width="180" height="140" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+        <text x="400" y="55" text-anchor="middle" font-size="13" font-weight="600" fill="#633806">SPRINT</text>
+        <text x="400" y="73" text-anchor="middle" font-size="10" fill="#854F0B">(1-4 weeks)</text>
+        <rect x="325" y="84" width="150" height="26" rx="4" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+        <text x="400" y="101" text-anchor="middle" font-size="10" fill="#633806">Sprint Backlog</text>
+        <rect x="325" y="116" width="150" height="26" rx="4" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+        <text x="400" y="133" text-anchor="middle" font-size="10" fill="#633806">Daily Standup ↻</text>
+        <line x1="490" y1="100" x2="515" y2="100" stroke="#854F0B" stroke-width="1.2" marker-end="url(#arr9)"/>
+        <!-- Increment -->
+        <rect x="515" y="55" width="140" height="90" rx="8" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+        <text x="585" y="80" text-anchor="middle" font-size="12" font-weight="600" fill="#27500A">Potentially</text>
+        <text x="585" y="96" text-anchor="middle" font-size="12" font-weight="600" fill="#27500A">Shippable</text>
+        <text x="585" y="112" text-anchor="middle" font-size="12" font-weight="600" fill="#27500A">Increment</text>
+        <text x="585" y="132" text-anchor="middle" font-size="10" fill="#3B6D11">+Review+Retro</text>
+        <!-- Feedback loop back to product backlog -->
+        <path d="M585 145 Q585 185 75 185 Q75 172 75 170" fill="none" stroke="#888780" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr9)"/>
+        <text x="340" y="196" text-anchor="middle" font-size="10" fill="#888780">Feedback → refined backlog for next sprint</text>
+      </svg>
+    </div>
+    <h4>Other Agile Frameworks:</h4>
+    <table>
+      <tr><th>Framework</th><th>Key Feature</th><th>Best For</th></tr>
+      <tr><td><strong>Scrum</strong></td><td>Time-boxed sprints; Scrum Master; ceremonies</td><td>Product development teams</td></tr>
+      <tr><td><strong>Kanban</strong></td><td>Visual board; WIP limits; continuous flow</td><td>Maintenance; support teams</td></tr>
+      <tr><td><strong>XP</strong></td><td>TDD, pair programming, continuous integration</td><td>Engineering-excellence focus</td></tr>
+      <tr><td><strong>SAFe</strong></td><td>Scales Agile to enterprise; Program Increments</td><td>Large organizations</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- Q5a Risk Reluctance -->
+<div class="q-block" id="q5a-23">
+  <div class="q-head"><span class="q-num p2">Q5a</span><div class="q-title">Why Managers Resist Risk Management</div></div>
+  <div class="q-body">
+    <table>
+      <tr><th>Reason</th><th>Explanation</th><th>Solution</th></tr>
+      <tr><td><strong>Optimism Bias</strong></td><td>"It won't happen to us" — underestimate probability</td><td>Pre-mortem analysis; reference class forecasting</td></tr>
+      <tr><td><strong>Time Pressure</strong></td><td>Risk workshops take time; deprioritized under tight deadlines</td><td>Make risk mgmt lightweight; integrate into planning</td></tr>
+      <tr><td><strong>Org Culture</strong></td><td>Companies that punish failure discourage raising risks</td><td>Create safe culture where risk reporting is rewarded</td></tr>
+      <tr><td><strong>Lack of Expertise</strong></td><td>Quantitative methods (Monte Carlo) require training</td><td>Use simple qualitative matrices first</td></tr>
+      <tr><td><strong>Low Perceived ROI</strong></td><td>Benefits are invisible (prevented problems)</td><td>Show historical data on prevented failures</td></tr>
+      <tr><td><strong>Stakeholder Pressure</strong></td><td>Clients want good news; risks may lose contracts</td><td>Frame risks as managed, not as problems</td></tr>
+      <tr><td><strong>Escalation of Commitment</strong></td><td>Ignore risks that suggest project should be stopped</td><td>Independent stage-gate reviews; pre-defined exit criteria</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- Q5b CPM 2023-24 -->
+<div class="q-block" id="q5b-23">
+  <div class="q-head"><span class="q-num p2">Q5b</span><div class="q-title">Activity Network — Forward &amp; Backward Pass (A–H Network, 2023-24)</div></div>
+  <div class="q-body">
+    <h4>Given Activities:</h4>
+    <table>
+      <tr><th>Activity</th><th>Description</th><th>Duration (wks)</th><th>Precedents</th></tr>
+      <tr><td>A</td><td>Hardware selection</td><td>8</td><td>—</td></tr>
+      <tr><td>B</td><td>System configuration</td><td>5</td><td>—</td></tr>
+      <tr><td>C</td><td>Install hardware</td><td>3</td><td>A</td></tr>
+      <tr><td>D</td><td>Data migration</td><td>4</td><td>B</td></tr>
+      <tr><td>E</td><td>Draft office procedures</td><td>4</td><td>B</td></tr>
+      <tr><td>F</td><td>Recruit staff</td><td>12</td><td>—</td></tr>
+      <tr><td>G</td><td>User training</td><td>5</td><td>E, F</td></tr>
+      <tr><td>H</td><td>Install and test system</td><td>3</td><td>C, D</td></tr>
+    </table>
+
+    <h4>Forward Pass:</h4>
+    <table>
+      <tr><th>Activity</th><th>ES</th><th>Duration</th><th>EF</th><th>Logic</th></tr>
+      <tr><td>A</td><td>0</td><td>8</td><td>8</td><td>No predecessor</td></tr>
+      <tr><td>B</td><td>0</td><td>5</td><td>5</td><td>No predecessor</td></tr>
+      <tr><td>F</td><td>0</td><td>12</td><td>12</td><td>No predecessor</td></tr>
+      <tr><td>C</td><td>8</td><td>3</td><td>11</td><td>After A (EF=8)</td></tr>
+      <tr><td>D</td><td>5</td><td>4</td><td>9</td><td>After B (EF=5)</td></tr>
+      <tr><td>E</td><td>5</td><td>4</td><td>9</td><td>After B (EF=5)</td></tr>
+      <tr><td>H</td><td>11</td><td>3</td><td>14</td><td>max(EF_C=11, EF_D=9) = 11</td></tr>
+      <tr><td>G</td><td>12</td><td>5</td><td>17</td><td>max(EF_E=9, EF_F=12) = 12</td></tr>
+    </table>
+    <div class="highlight"><strong>Project Duration = max(EF_H=14, EF_G=17) = 17 weeks</strong></div>
+
+    <h4>Backward Pass (LF of project = 17):</h4>
+    <table>
+      <tr><th>Activity</th><th>LF</th><th>Duration</th><th>LS</th><th>Logic</th></tr>
+      <tr><td>G</td><td>17</td><td>5</td><td>12</td><td>Terminal</td></tr>
+      <tr><td>H</td><td>17</td><td>3</td><td>14</td><td>Terminal</td></tr>
+      <tr><td>F</td><td>12</td><td>12</td><td>0</td><td>min(LS_G)=12</td></tr>
+      <tr><td>E</td><td>12</td><td>4</td><td>8</td><td>min(LS_G)=12</td></tr>
+      <tr><td>D</td><td>14</td><td>4</td><td>10</td><td>min(LS_H)=14</td></tr>
+      <tr><td>C</td><td>14</td><td>3</td><td>11</td><td>min(LS_H)=14</td></tr>
+      <tr><td>B</td><td>8</td><td>5</td><td>3</td><td>min(LS_D=10,LS_E=8)=8</td></tr>
+      <tr><td>A</td><td>11</td><td>8</td><td>3</td><td>min(LS_C)=11</td></tr>
+    </table>
+
+    <h4>Float &amp; Critical Path:</h4>
+    <table class="cp-table">
+      <tr><th>Activity</th><th>ES</th><th>EF</th><th>LS</th><th>LF</th><th>Float</th><th>Critical?</th></tr>
+      <tr><td>A</td><td>0</td><td>8</td><td>3</td><td>11</td><td>3</td><td>No</td></tr>
+      <tr><td>B</td><td>0</td><td>5</td><td>3</td><td>8</td><td>3</td><td>No</td></tr>
+      <tr><td>C</td><td>8</td><td>11</td><td>11</td><td>14</td><td>3</td><td>No</td></tr>
+      <tr><td>D</td><td>5</td><td>9</td><td>10</td><td>14</td><td>5</td><td>No</td></tr>
+      <tr><td>E</td><td>5</td><td>9</td><td>8</td><td>12</td><td>3</td><td>No</td></tr>
+      <tr class=""><td class="cp">F</td><td class="cp">0</td><td class="cp">12</td><td class="cp">0</td><td class="cp">12</td><td class="cp">0</td><td class="cp">✅ CRITICAL</td></tr>
+      <tr><td class="cp">G</td><td class="cp">12</td><td class="cp">17</td><td class="cp">12</td><td class="cp">17</td><td class="cp">0</td><td class="cp">✅ CRITICAL</td></tr>
+      <tr><td>H</td><td>11</td><td>14</td><td>14</td><td>17</td><td>3</td><td>No</td></tr>
+    </table>
+    <div id="diag-cpm1" class="diagram-wrap">
+      <div class="diagram-title">AON Network Diagram — 2023-24 (Critical Path: F→G highlighted in red)</div>
+      <svg width="100%" viewBox="0 0 680 300" role="img">
+        <title>Activity on Node Network 2023-24</title>
+        <desc>Activity network showing paths A-C-H, B-D-H, B-E-G, F-G with critical path F-G highlighted</desc>
+        <defs>
+          <marker id="arrN" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+        </defs>
+        <!-- Start node -->
+        <rect x="5" y="123" width="50" height="44" rx="6" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+        <text x="30" y="149" text-anchor="middle" font-size="11" font-weight="600" fill="#444441">START</text>
+
+        <!-- A: row top -->
+        <rect x="90" y="20" width="90" height="60" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+        <text x="135" y="40" text-anchor="middle" font-size="11" font-weight="600" fill="#0C447C">A</text>
+        <text x="135" y="55" text-anchor="middle" font-size="10" fill="#185FA5">d=8</text>
+        <text x="135" y="70" text-anchor="middle" font-size="10" fill="#185FA5">ES:0 EF:8</text>
+
+        <!-- B: row mid -->
+        <rect x="90" y="123" width="90" height="60" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+        <text x="135" y="143" text-anchor="middle" font-size="11" font-weight="600" fill="#0C447C">B</text>
+        <text x="135" y="158" text-anchor="middle" font-size="10" fill="#185FA5">d=5</text>
+        <text x="135" y="173" text-anchor="middle" font-size="10" fill="#185FA5">ES:0 EF:5</text>
+
+        <!-- F: row bottom — CRITICAL -->
+        <rect x="90" y="220" width="90" height="60" rx="6" fill="#FCEBEB" stroke="#A32D2D" stroke-width="1.5"/>
+        <text x="135" y="240" text-anchor="middle" font-size="11" font-weight="600" fill="#791F1F">F</text>
+        <text x="135" y="255" text-anchor="middle" font-size="10" fill="#A32D2D">d=12 ⚠</text>
+        <text x="135" y="270" text-anchor="middle" font-size="10" fill="#A32D2D">ES:0 EF:12</text>
+
+        <!-- Arrows from Start -->
+        <line x1="55" y1="140" x2="88" y2="50" stroke="#5F5E5A" stroke-width="0.8" marker-end="url(#arrN)"/>
+        <line x1="55" y1="145" x2="88" y2="153" stroke="#5F5E5A" stroke-width="0.8" marker-end="url(#arrN)"/>
+        <line x1="55" y1="148" x2="88" y2="248" stroke="#A32D2D" stroke-width="1.2" marker-end="url(#arrN)"/>
+
+        <!-- C after A -->
+        <rect x="240" y="20" width="90" height="60" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+        <text x="285" y="40" text-anchor="middle" font-size="11" font-weight="600" fill="#0C447C">C</text>
+        <text x="285" y="55" text-anchor="middle" font-size="10" fill="#185FA5">d=3</text>
+        <text x="285" y="70" text-anchor="middle" font-size="10" fill="#185FA5">ES:8 EF:11</text>
+        <line x1="180" y1="50" x2="238" y2="50" stroke="#185FA5" stroke-width="0.8" marker-end="url(#arrN)"/>
+
+        <!-- D after B -->
+        <rect x="240" y="105" width="90" height="60" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+        <text x="285" y="125" text-anchor="middle" font-size="11" font-weight="600" fill="#0C447C">D</text>
+        <text x="285" y="140" text-anchor="middle" font-size="10" fill="#185FA5">d=4</text>
+        <text x="285" y="155" text-anchor="middle" font-size="10" fill="#185FA5">ES:5 EF:9</text>
+        <line x1="180" y1="153" x2="238" y2="135" stroke="#185FA5" stroke-width="0.8" marker-end="url(#arrN)"/>
+
+        <!-- E after B -->
+        <rect x="240" y="183" width="90" height="60" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+        <text x="285" y="203" text-anchor="middle" font-size="11" font-weight="600" fill="#0C447C">E</text>
+        <text x="285" y="218" text-anchor="middle" font-size="10" fill="#185FA5">d=4</text>
+        <text x="285" y="233" text-anchor="middle" font-size="10" fill="#185FA5">ES:5 EF:9</text>
+        <line x1="180" y1="153" x2="238" y2="213" stroke="#185FA5" stroke-width="0.8" marker-end="url(#arrN)"/>
+
+        <!-- H after C,D -->
+        <rect x="395" y="55" width="90" height="60" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+        <text x="440" y="75" text-anchor="middle" font-size="11" font-weight="600" fill="#0C447C">H</text>
+        <text x="440" y="90" text-anchor="middle" font-size="10" fill="#185FA5">d=3</text>
+        <text x="440" y="105" text-anchor="middle" font-size="10" fill="#185FA5">ES:11 EF:14</text>
+        <line x1="330" y1="50" x2="393" y2="75" stroke="#185FA5" stroke-width="0.8" marker-end="url(#arrN)"/>
+        <line x1="330" y1="135" x2="393" y2="90" stroke="#185FA5" stroke-width="0.8" marker-end="url(#arrN)"/>
+
+        <!-- G after E,F — CRITICAL -->
+        <rect x="395" y="185" width="90" height="60" rx="6" fill="#FCEBEB" stroke="#A32D2D" stroke-width="1.5"/>
+        <text x="440" y="205" text-anchor="middle" font-size="11" font-weight="600" fill="#791F1F">G ⚠</text>
+        <text x="440" y="220" text-anchor="middle" font-size="10" fill="#A32D2D">d=5</text>
+        <text x="440" y="235" text-anchor="middle" font-size="10" fill="#A32D2D">ES:12 EF:17</text>
+        <line x1="330" y1="213" x2="393" y2="213" stroke="#185FA5" stroke-width="0.8" marker-end="url(#arrN)"/>
+        <line x1="180" y1="250" x2="393" y2="220" stroke="#A32D2D" stroke-width="1.5" marker-end="url(#arrN)"/>
+
+        <!-- End node -->
+        <rect x="540" y="113" width="60" height="44" rx="6" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+        <text x="570" y="139" text-anchor="middle" font-size="11" font-weight="600" fill="#444441">END</text>
+        <text x="570" y="153" text-anchor="middle" font-size="10" fill="#5F5E5A">Wk 17</text>
+        <line x1="485" y1="85" x2="538" y2="130" stroke="#185FA5" stroke-width="0.8" marker-end="url(#arrN)"/>
+        <line x1="485" y1="215" x2="538" y2="142" stroke="#A32D2D" stroke-width="1.5" marker-end="url(#arrN)"/>
+
+        <!-- Legend -->
+        <rect x="10" y="265" width="14" height="10" rx="2" fill="#FCEBEB" stroke="#A32D2D" stroke-width="1.2"/>
+        <text x="30" y="274" font-size="10" fill="#A32D2D">Critical Path (Float=0)</text>
+        <rect x="200" y="265" width="14" height="10" rx="2" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+        <text x="220" y="274" font-size="10" fill="#185FA5">Non-critical activities</text>
+      </svg>
+    </div>
+    <div class="highlight">
+      <strong>Critical Path: F → G | Duration: 17 weeks</strong><br>
+      Float=0 on F and G — any delay on either will delay the project.
+    </div>
+  </div>
+</div>
+
+<!-- Q6a EAC VAC -->
+<div class="q-block" id="q6a-23">
+  <div class="q-head"><span class="q-num p2">Q6a</span><div class="q-title">EAC &amp; VAC Calculation (both SPI &amp; CPI influence)</div></div>
+  <div class="q-body">
+    <h4>Given: BAC=$22,000 | EV=$13,000 | PV=$14,000 | AC=$15,000</h4>
+    <h4>Step 1: Compute Performance Indices</h4>
+    <table>
+      <tr><th>Metric</th><th>Formula</th><th>Value</th><th>Meaning</th></tr>
+      <tr><td>CPI</td><td>EV/AC = 13,000/15,000</td><td><strong>0.867</strong></td><td>Over budget (spending $1.15 per $1 earned)</td></tr>
+      <tr><td>SPI</td><td>EV/PV = 13,000/14,000</td><td><strong>0.929</strong></td><td>Behind schedule</td></tr>
+      <tr><td>CV</td><td>EV−AC = 13,000−15,000</td><td><strong>−$2,000</strong></td><td>Over budget by $2,000</td></tr>
+      <tr><td>SV</td><td>EV−PV = 13,000−14,000</td><td><strong>−$1,000</strong></td><td>Behind by $1,000 worth of work</td></tr>
+    </table>
+    <h4>Step 2: ETC (Estimate to Complete) — both SPI &amp; CPI:</h4>
+    <div class="formula">ETC = (BAC − EV) / (CPI × SPI)
+    = (22,000 − 13,000) / (0.867 × 0.929)
+    = 9,000 / 0.806
+    = $11,166</div>
+    <h4>Step 3: EAC (Estimate at Completion):</h4>
+    <div class="formula">EAC = AC + ETC = 15,000 + 11,166 = <strong>$26,166</strong></div>
+    <h4>Step 4: VAC (Variance at Completion):</h4>
+    <div class="formula">VAC = BAC − EAC = 22,000 − 26,166 = <strong>−$4,166</strong></div>
+    <div class="highlight"><strong>Interpretation:</strong> Project will <strong>overrun by $4,166</strong>. Both CPI and SPI &lt; 1 indicate the project is over budget AND behind schedule. Immediate corrective action required.</div>
+  </div>
+</div>
+
+<!-- Q6b SPI CPI -->
+<div class="q-block" id="q6b-23">
+  <div class="q-head"><span class="q-num p2">Q6b</span><div class="q-title">SPI &amp; CPI Calculation (Activity A &amp; B)</div></div>
+  <div class="q-body">
+    <h4>Given:</h4>
+    <table>
+      <tr><th></th><th>Activity A</th><th>Activity B</th></tr>
+      <tr><td>Actual Cost (AC)</td><td>₹2,00,000</td><td>₹1,00,000</td></tr>
+      <tr><td>Planned Value (PV)</td><td>₹1,80,000</td><td>₹80,000</td></tr>
+      <tr><td>% Complete</td><td>100%</td><td>75%</td></tr>
+    </table>
+    <h4>Step 1: Earned Value (EV)</h4>
+    <div class="formula">EV_A = 100% × PV_A = 1.0 × 1,80,000 = ₹1,80,000
+EV_B = 75% × PV_B = 0.75 × 80,000 = ₹60,000</div>
+    <h4>Step 2: Totals</h4>
+    <div class="formula">Total EV = 1,80,000 + 60,000 = ₹2,40,000
+Total PV = 1,80,000 + 80,000 = ₹2,60,000
+Total AC = 2,00,000 + 1,00,000 = ₹3,00,000</div>
+    <h4>Step 3: Performance Indices</h4>
+    <div class="formula">SPI = EV/PV = 2,40,000 / 2,60,000 = <strong>0.923</strong>
+CPI = EV/AC = 2,40,000 / 3,00,000 = <strong>0.80</strong></div>
+    <div class="highlight">
+      <strong>SPI = 0.923</strong> → Behind schedule (92.3% of planned work done)<br>
+      <strong>CPI = 0.80</strong> → Over budget (spending ₹1.25 for every ₹1 of value earned)<br>
+      Both indices &lt; 1 → Project in trouble; corrective action required.
+    </div>
+  </div>
+</div>
+
+<!-- Q7a Job Redesign -->
+<div class="q-block" id="q7a-23">
+  <div class="q-head"><span class="q-num p2">Q7a</span><div class="q-title">Job Redesign for Low Satisfaction (Testing, Help Desk, Batch Input)</div></div>
+  <div class="q-body">
+    <h4>Using Hackman-Oldham Model (→ see <a href="#q7b-24">2024-25 Q7b</a> for model diagram)</h4>
+    <table>
+      <tr><th>Department</th><th>Root Cause</th><th>Redesign Actions</th></tr>
+      <tr>
+        <td><strong>System Testing Group</strong></td>
+        <td>Repetitive testing; no ownership; unclear impact</td>
+        <td>
+          <ul>
+            <li>Assign tester ownership of entire module (↑ Task Identity)</li>
+            <li>Rotate between functional, performance, automation testing (↑ Skill Variety)</li>
+            <li>Show how bugs caught prevent user failures (↑ Significance)</li>
+            <li>Let testers choose testing approach (↑ Autonomy)</li>
+            <li>Share defect metrics; celebrate "bugs caught" (↑ Feedback)</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Help Desk</strong></td>
+        <td>Reactive; stressful; low skill variety</td>
+        <td>
+          <ul>
+            <li>Assign each person a group of users to support (↑ Task Identity)</li>
+            <li>Train in advanced troubleshooting (↑ Skill Variety)</li>
+            <li>Empower staff to resolve without escalation (↑ Autonomy)</li>
+            <li>Customer satisfaction scores + resolution rate dashboards (↑ Feedback)</li>
+            <li>Give senior staff mentoring role (↑ Significance)</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Batch Input</strong></td>
+        <td>Highly repetitive; mechanical; no feedback</td>
+        <td>
+          <ul>
+            <li>Assign complete data sets not single entries (↑ Task Identity)</li>
+            <li>Cross-train on data validation and quality checking (↑ Skill Variety)</li>
+            <li>Explain downstream impact of accurate data (↑ Significance)</li>
+            <li>Error rate dashboard; quality recognition (↑ Feedback)</li>
+            <li>Automate repetitive parts; redeploy to validation tasks</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- Q7b Decision Obstacles -->
+<div class="q-block" id="q7b-23">
+  <div class="q-head"><span class="q-num p2">Q7b</span><div class="q-title">Reducing Mental Obstacles to Decision-Making</div></div>
+  <div class="q-body">
+    <table>
+      <tr><th>Obstacle</th><th>Definition</th><th>Steps to Reduce</th></tr>
+      <tr>
+        <td><strong>Faulty Heuristics</strong><br>(Cognitive Biases)</td>
+        <td>Availability bias, anchoring, representativeness causing systematic errors</td>
+        <td>
+          <ul>
+            <li>Structured decision frameworks (pros/cons matrix, decision trees)</li>
+            <li>Devil's advocate role in meetings</li>
+            <li>Reference class forecasting (compare with similar past projects statistically)</li>
+            <li>Pre-mortem: "Imagine the project failed — what went wrong?"</li>
+            <li>Cognitive bias awareness training</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Escalation of Commitment</strong><br>(Sunk Cost Fallacy)</td>
+        <td>Continuing a failing project because of past investment</td>
+        <td>
+          <ul>
+            <li>Stage-gate reviews with independent reviewers (not just the project team)</li>
+            <li>Pre-defined exit criteria before project starts</li>
+            <li>Separate decision-making from implementation teams</li>
+            <li>Anonymous review mechanisms — reduce ego investment</li>
+            <li>Metrics-based go/no-go: CPI, SPI thresholds trigger review</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Information Overload</strong></td>
+        <td>Too much data leads to analysis paralysis or poor filtering</td>
+        <td>
+          <ul>
+            <li>Dashboard with 3–5 key KPIs only</li>
+            <li>Exception reporting — only escalate items outside acceptable range</li>
+            <li>Structured meeting agendas with pre-distributed information</li>
+            <li>Time-box decisions — set a deadline to decide</li>
+            <li>Separate "need to know" from "nice to know"</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PAPER 3 — 2022-23
+══════════════════════════════════════════════════════════ -->
+<div class="paper-banner p3">📄 Paper 3 — 2022-23 (KOE-068) | 100 Marks</div>
+
+<div id="p3-a" class="sec-head">Section A — Short Answers (2 × 10 = 20)</div>
+
+<!-- Q1a BTech as project -->
+<div class="q-block" id="q1a-22">
+  <div class="q-head"><span class="q-num p3">Q1a</span><div class="q-title">B.Tech Program as a Project</div></div>
+  <div class="q-body">
+    <p>A B.Tech program qualifies as a project because it satisfies all project characteristics:</p>
+    <table>
+      <tr><th>Project Characteristic</th><th>B.Tech Example</th></tr>
+      <tr><td>Temporary</td><td>4-year fixed duration</td></tr>
+      <tr><td>Unique outcome</td><td>A graduate with specific skills and knowledge</td></tr>
+      <tr><td>Defined scope</td><td>Fixed curriculum, subjects, credit requirements</td></tr>
+      <tr><td>Budget/Resources</td><td>Tuition fees, faculty, labs, library</td></tr>
+      <tr><td>Goal/Deliverable</td><td>Award of B.Tech degree</td></tr>
+      <tr><td>Risks</td><td>Failing exams, dropping subjects, poor placements</td></tr>
+      <tr><td>Start/End dates</td><td>Admission date → Graduation date</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- Q1b Technical Risk -->
+<div class="q-block" id="q1b-22">
+  <div class="q-head"><span class="q-num p3">Q1b</span><div class="q-title">Technical Risk in SPM</div></div>
+  <div class="q-body">
+    <p><strong>Technical Risk</strong> arises from technological uncertainties in software development.</p>
+    <h4>Examples:</h4>
+    <ul>
+      <li>Selecting unproven or new technology (e.g., new framework with no support)</li>
+      <li>Integration failures between subsystems or third-party APIs</li>
+      <li>Performance bottlenecks in the chosen architecture</li>
+      <li>Software complexity exceeding team capability</li>
+      <li>Security vulnerabilities in chosen technology stack</li>
+      <li>Hardware/software compatibility issues</li>
+    </ul>
+    <p><strong>Mitigation:</strong> Proof-of-concept prototypes, architectural reviews, selecting proven technologies, expert consultation.</p>
+  </div>
+</div>
+
+<!-- Q1c Function Points vs LOC -->
+<div class="q-block" id="q1c-22">
+  <div class="q-head"><span class="q-num p3">Q1c</span><div class="q-title">Function Points vs. Lines of Code (LOC)</div></div>
+  <div class="q-body">
+    <table>
+      <tr><th>Aspect</th><th>Function Points (FP)</th><th>Lines of Code (LOC)</th></tr>
+      <tr><td>Measures</td><td>Functional size (user-visible features)</td><td>Physical code volume</td></tr>
+      <tr><td>Language independent?</td><td>✅ Yes — counts features not code</td><td>❌ No — varies by language</td></tr>
+      <tr><td>When measurable?</td><td>At requirements phase (early)</td><td>Only after coding (late)</td></tr>
+      <tr><td>User-understandable?</td><td>✅ Yes — counts inputs, outputs, queries</td><td>❌ No — meaningless to users</td></tr>
+      <tr><td>What it counts</td><td>EI, EO, EQ, ILF, EIF</td><td>Executable statements</td></tr>
+      <tr><td>Drawback</td><td>Complex counting rules; subjective</td><td>Same logic = different LOC in different languages</td></tr>
+    </table>
+    <p><strong>Conclusion:</strong> FP is better for early estimation; LOC is simpler but language-dependent and late-measurable.</p>
+  </div>
+</div>
+
+<!-- Q1d Cost Estimation Techniques -->
+<div class="q-block" id="q1d-22">
+  <div class="q-head"><span class="q-num p3">Q1d</span><div class="q-title">Cost Estimation Techniques</div></div>
+  <div class="q-body">
+    <ol>
+      <li><strong>Expert Judgment / Analogy</strong> — compare with similar past projects</li>
+      <li><strong>Bottom-Up Estimation</strong> — estimate each task individually and sum up</li>
+      <li><strong>Parametric Models</strong> — COCOMO, Function Points (mathematical relationships)</li>
+      <li><strong>Three-Point Estimation</strong> — (O + 4M + P)/6 based on PERT</li>
+      <li><strong>PERT-based</strong> — probabilistic; handles uncertainty</li>
+      <li><strong>Vendor Bids</strong> — for outsourced components</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Q1e Risk Planning -->
+<div class="q-block" id="q1e-22">
+  <div class="q-head"><span class="q-num p3">Q1e</span><div class="q-title">Why Risk Planning is Required</div></div>
+  <div class="q-body">
+    <ol>
+      <li><strong>Uncertainty is inherent</strong> — requirements change, technology evolves, people leave</li>
+      <li><strong>Prevents surprises</strong> — proactive identification means problems are anticipated not reactive</li>
+      <li><strong>Reduces cost</strong> — fixing risks before they materialize is far cheaper than crisis management</li>
+      <li><strong>Better decision-making</strong> — helps prioritize where to invest effort and resources</li>
+      <li><strong>Stakeholder confidence</strong> — demonstrates management is in control</li>
+      <li><strong>Regulatory/contractual requirements</strong> — many contracts mandate formal risk plans</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Q1f Activity Node (same as 2023-24 Q1f) -->
+<div class="q-block" id="q1f-22">
+  <div class="q-head"><span class="q-num p3">Q1f</span><div class="q-title">Structure of Activity Node in Activity Network</div></div>
+  <div class="q-body">
+    <div class="ref-box"><strong>→ Same as 2023-24 Q1f.</strong> See <a href="#q1f-23">Q1f 2023-24</a> for diagram and explanation.</div>
+  </div>
+</div>
+
+<!-- Q1g SCM Advantages -->
+<div class="q-block" id="q1g-22">
+  <div class="q-head"><span class="q-num p3">Q1g</span><div class="q-title">Advantages of SCM</div></div>
+  <div class="q-body">
+    <ol>
+      <li><strong>Version Control</strong> — maintain history of all changes; rollback if needed</li>
+      <li><strong>Parallel Development</strong> — multiple developers work without conflicts (branching/merging)</li>
+      <li><strong>Reproducibility</strong> — can rebuild any past version of the software</li>
+      <li><strong>Traceability</strong> — know who changed what, when, and why</li>
+      <li><strong>Conflict Resolution</strong> — merge conflicts detected and resolved systematically</li>
+      <li><strong>Audit Trail</strong> — compliance and quality assurance evidence</li>
+      <li><strong>Stable Releases</strong> — controlled, tested software releases to users</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Q1h CPI>1.1 SPI>1.2 -->
+<div class="q-block" id="q1h-22">
+  <div class="q-head"><span class="q-num p3">Q1h</span><div class="q-title">Effect on Project if CPI &gt; 1.1 and SPI &gt; 1.2</div></div>
+  <div class="q-body">
+    <table>
+      <tr><th>Index</th><th>Value</th><th>Meaning</th></tr>
+      <tr><td>CPI &gt; 1.1</td><td>Spending ~91p per ₹1 of value earned</td><td>Project is <strong>under budget</strong></td></tr>
+      <tr><td>SPI &gt; 1.2</td><td>20% more work done than planned</td><td>Project is <strong>ahead of schedule</strong></td></tr>
+    </table>
+    <h4>Effects and Actions:</h4>
+    <ul>
+      <li><strong>Positive:</strong> Opportunity to deliver early or reduce costs</li>
+      <li><strong>Caution:</strong> Re-examine estimates — may indicate under-scoping or overly conservative original estimates</li>
+      <li><strong>Action:</strong> PM may reallocate freed resources to other projects</li>
+      <li><strong>Risk:</strong> Aggressive revision may sacrifice quality or create overconfidence for future projects</li>
+      <li>Management may revise estimates downward for remaining phases — pushing team harder</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Q1i Staff Selection -->
+<div class="q-block" id="q1i-22">
+  <div class="q-head"><span class="q-num p3">Q1i</span><div class="q-title">Best Method of Staff Selection</div></div>
+  <div class="q-body">
+    <h4>Best Practice — Competency-Based Selection:</h4>
+    <ol>
+      <li><strong>Job Analysis</strong> — define exact technical skills, experience, and personality needed</li>
+      <li><strong>Structured Interviews</strong> — standardized competency-based questions (reduces bias)</li>
+      <li><strong>Technical Tests/Coding Challenges</strong> — assess actual skills objectively</li>
+      <li><strong>Psychometric Tests</strong> — assess problem-solving ability and personality fit</li>
+      <li><strong>Portfolio/Past Work Review</strong> — for experienced candidates</li>
+      <li><strong>Reference Checks</strong> — verify claimed experience and work style</li>
+      <li><strong>Trial Task</strong> — short paid assignment to evaluate real-world performance</li>
+    </ol>
+    <p><strong>Most effective combination:</strong> Technical test + Structured interview + Reference check</p>
+  </div>
+</div>
+
+<!-- Q1j Leadership (same as 2024-25 Q1g) -->
+<div class="q-block" id="q1j-22">
+  <div class="q-head"><span class="q-num p3">Q1j</span><div class="q-title">Role of Leadership in Project Management</div></div>
+  <div class="q-body">
+    <div class="ref-box"><strong>→ Same as 2024-25 Q1g.</strong> See <a href="#q1g-24">Q1g 2024-25</a> for full answer.</div>
+  </div>
+</div>
+
+<!-- ───── Section B ───── -->
+<div id="p3-b" class="sec-head">Section B — Medium Answers (10 × 3 = 30)</div>
+
+<!-- Q2a Project Portfolio Management -->
+<div class="q-block" id="q2a-22">
+  <div class="q-head"><span class="q-num p3">Q2a</span><div class="q-title">Project Portfolio Management (PPM)</div></div>
+  <div class="q-body">
+    <p><strong>PPM</strong> is the centralized management of multiple projects to achieve strategic organizational objectives.</p>
+    <h4>Key Activities:</h4>
+    <table>
+      <tr><th>Activity</th><th>Description</th></tr>
+      <tr><td><strong>Portfolio Planning</strong></td><td>Identify all candidate projects; align with strategy; assess resource availability</td></tr>
+      <tr><td><strong>Portfolio Selection</strong></td><td>Evaluate using NPV, ROI, strategic fit, risk level; select highest-value projects within constraints</td></tr>
+      <tr><td><strong>Portfolio Balancing</strong></td><td>Mix short/long-term; balance risk; avoid resource overcommitment</td></tr>
+      <tr><td><strong>Portfolio Monitoring</strong></td><td>Track collective performance; stage-gate reviews; dashboard reporting to senior management</td></tr>
+    </table>
+    <h4>Example:</h4>
+    <p>An IT company has 8 proposals. Using PPM scoring:</p>
+    <ul>
+      <li><strong>Approved:</strong> Projects A, C, F (high ROI, strategic fit, affordable)</li>
+      <li><strong>Deferred:</strong> Project B (resource conflict with A)</li>
+      <li><strong>Rejected:</strong> Project D (negative NPV)</li>
+      <li><strong>Watchlist:</strong> Projects E, G, H (pending available resources)</li>
+    </ul>
+    <p><strong>Tools:</strong> MS Project Portfolio, Planview, CA PPM</p>
+    <p><strong>Benefits:</strong> Better ROI, fewer failures, strategic alignment, efficient resource use.</p>
+  </div>
+</div>
+
+<!-- Q2b COSMIC FFP -->
+<div class="q-block" id="q2b-22">
+  <div class="q-head"><span class="q-num p3">Q2b</span><div class="q-title">COSMIC Full Function Points for Software Cost Estimation</div></div>
+  <div class="q-body">
+    <p><strong>COSMIC (Common Software Measurement International Consortium)</strong> measures software functional size through counting data movements.</p>
+    <h4>Four Data Movement Types (each = 1 CFP):</h4>
+    <table>
+      <tr><th>Type</th><th>Symbol</th><th>Direction</th><th>SPM Example</th></tr>
+      <tr><td>Entry</td><td>E</td><td>Data moves INTO software from user</td><td>Student submits registration form</td></tr>
+      <tr><td>Exit</td><td>X</td><td>Data moves OUT of software to user</td><td>System displays grade report</td></tr>
+      <tr><td>Read</td><td>R</td><td>Software reads from persistent storage</td><td>Fetching course list from DB</td></tr>
+      <tr><td>Write</td><td>W</td><td>Software writes to persistent storage</td><td>Saving exam result to DB</td></tr>
+    </table>
+    <h4>Measurement Process:</h4>
+    <ol>
+      <li>Identify functional users (humans or systems interacting with software)</li>
+      <li>Identify functional processes (requirements that trigger processing)</li>
+      <li>For each process, count all data movements (E, X, R, W)</li>
+      <li>Total CFPs = total data movements</li>
+    </ol>
+    <h4>Worked Example — Student Registration:</h4>
+    <table>
+      <tr><th>Action</th><th>Type</th><th>CFPs</th></tr>
+      <tr><td>Student enters registration data</td><td>E</td><td>1</td></tr>
+      <tr><td>System reads course availability from DB</td><td>R</td><td>1</td></tr>
+      <tr><td>System saves registration to DB</td><td>W</td><td>1</td></tr>
+      <tr><td>System displays confirmation to student</td><td>X</td><td>1</td></tr>
+      <tr><td colspan="2"><strong>Total for this process</strong></td><td><strong>4 CFP</strong></td></tr>
+    </table>
+    <div class="formula">Effort = Total CFP × (hours per CFP from historical productivity data)</div>
+    <h4>Advantages over Function Point Analysis:</h4>
+    <ul>
+      <li>Handles real-time and embedded systems better</li>
+      <li>More objective and repeatable</li>
+      <li>Language and technology independent</li>
+      <li>Simpler counting rules</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Q2c WBS -->
+<div class="q-block" id="q2c-22">
+  <div class="q-head"><span class="q-num p3">Q2c</span><div class="q-title">Work Breakdown Structure (WBS)</div></div>
+  <div class="q-body">
+    <p>WBS is a hierarchical decomposition of the total project scope into smaller manageable work packages.</p>
+    <div id="diag-wbs" class="diagram-wrap">
+      <div class="diagram-title">WBS — E-Commerce Website (Software Project Example)</div>
+      <svg width="100%" viewBox="0 0 680 320" role="img">
+        <title>Work Breakdown Structure for E-Commerce Website</title>
+        <desc>Hierarchical WBS showing project decomposed into 6 main branches: PM, Requirements, Design, Development, Testing, Deployment</desc>
+        <defs><marker id="arrW" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+        <!-- Root -->
+        <rect x="225" y="8" width="230" height="44" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+        <text x="340" y="26" text-anchor="middle" font-size="13" font-weight="600" fill="#3C3489">E-Commerce Website</text>
+        <text x="340" y="44" text-anchor="middle" font-size="10" fill="#534AB7">Level 0</text>
+
+        <!-- Level 1 boxes — 6 boxes across -->
+        <!-- PM -->
+        <rect x="5" y="90" width="92" height="44" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+        <text x="51" y="108" text-anchor="middle" font-size="11" font-weight="600" fill="#085041">1. Project</text>
+        <text x="51" y="124" text-anchor="middle" font-size="11" font-weight="600" fill="#085041">Mgmt</text>
+        <!-- Req -->
+        <rect x="107" y="90" width="92" height="44" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+        <text x="153" y="108" text-anchor="middle" font-size="11" font-weight="600" fill="#085041">2. Require-</text>
+        <text x="153" y="124" text-anchor="middle" font-size="11" font-weight="600" fill="#085041">ments</text>
+        <!-- Design -->
+        <rect x="209" y="90" width="92" height="44" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+        <text x="255" y="108" text-anchor="middle" font-size="11" font-weight="600" fill="#085041">3. Design</text>
+        <!-- Dev -->
+        <rect x="311" y="90" width="92" height="44" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+        <text x="357" y="108" text-anchor="middle" font-size="11" font-weight="600" fill="#085041">4. Develop-</text>
+        <text x="357" y="124" text-anchor="middle" font-size="11" font-weight="600" fill="#085041">ment</text>
+        <!-- Test -->
+        <rect x="413" y="90" width="92" height="44" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+        <text x="459" y="108" text-anchor="middle" font-size="11" font-weight="600" fill="#085041">5. Testing</text>
+        <!-- Deploy -->
+        <rect x="515" y="90" width="152" height="44" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+        <text x="591" y="108" text-anchor="middle" font-size="11" font-weight="600" fill="#085041">6. Deployment</text>
+
+        <!-- Lines from root to level 1 -->
+        <line x1="340" y1="52" x2="51" y2="90" stroke="#888780" stroke-width="0.6"/>
+        <line x1="340" y1="52" x2="153" y2="90" stroke="#888780" stroke-width="0.6"/>
+        <line x1="340" y1="52" x2="255" y2="90" stroke="#888780" stroke-width="0.6"/>
+        <line x1="340" y1="52" x2="357" y2="90" stroke="#888780" stroke-width="0.6"/>
+        <line x1="340" y1="52" x2="459" y2="90" stroke="#888780" stroke-width="0.6"/>
+        <line x1="340" y1="52" x2="591" y2="90" stroke="#888780" stroke-width="0.6"/>
+
+        <!-- Level 2 under Development (key example) -->
+        <rect x="270" y="190" width="76" height="38" rx="5" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+        <text x="308" y="208" text-anchor="middle" font-size="10" font-weight="600" fill="#633806">4.1</text>
+        <text x="308" y="222" text-anchor="middle" font-size="10" fill="#854F0B">Frontend</text>
+
+        <rect x="356" y="190" width="76" height="38" rx="5" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+        <text x="394" y="208" text-anchor="middle" font-size="10" font-weight="600" fill="#633806">4.2</text>
+        <text x="394" y="222" text-anchor="middle" font-size="10" fill="#854F0B">Backend</text>
+
+        <rect x="442" y="190" width="76" height="38" rx="5" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+        <text x="480" y="208" text-anchor="middle" font-size="10" font-weight="600" fill="#633806">4.3</text>
+        <text x="480" y="222" text-anchor="middle" font-size="10" fill="#854F0B">Database</text>
+
+        <line x1="357" y1="134" x2="308" y2="190" stroke="#854F0B" stroke-width="0.6"/>
+        <line x1="357" y1="134" x2="394" y2="190" stroke="#854F0B" stroke-width="0.6"/>
+        <line x1="357" y1="134" x2="480" y2="190" stroke="#854F0B" stroke-width="0.6"/>
+
+        <!-- Level 2 under Testing -->
+        <rect x="370" y="250" width="76" height="38" rx="5" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.5"/>
+        <text x="408" y="268" text-anchor="middle" font-size="10" font-weight="600" fill="#791F1F">5.1 Unit</text>
+        <text x="408" y="282" text-anchor="middle" font-size="10" fill="#A32D2D">Testing</text>
+
+        <rect x="456" y="250" width="80" height="38" rx="5" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.5"/>
+        <text x="496" y="268" text-anchor="middle" font-size="10" font-weight="600" fill="#791F1F">5.2 Integ.</text>
+        <text x="496" y="282" text-anchor="middle" font-size="10" fill="#A32D2D">Testing</text>
+
+        <rect x="546" y="250" width="76" height="38" rx="5" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.5"/>
+        <text x="584" y="268" text-anchor="middle" font-size="10" font-weight="600" fill="#791F1F">5.3 UAT</text>
+
+        <line x1="459" y1="134" x2="408" y2="250" stroke="#A32D2D" stroke-width="0.6"/>
+        <line x1="459" y1="134" x2="496" y2="250" stroke="#A32D2D" stroke-width="0.6"/>
+        <line x1="459" y1="134" x2="584" y2="250" stroke="#A32D2D" stroke-width="0.6"/>
+
+        <text x="340" y="305" text-anchor="middle" font-size="10" fill="#888780">100% Rule: WBS must capture 100% of project scope — nothing more, nothing less</text>
+      </svg>
+    </div>
+    <h4>WBS for Software Product (feature-based):</h4>
+    <p>For a product, WBS is organized around features rather than phases — Login Module, Account Management, Fund Transfer, Reports, etc.</p>
+    <h4>WBS Dictionary:</h4>
+    <p>Each element includes: description, responsible party, duration, cost, acceptance criteria.</p>
+  </div>
+</div>
+
+<!-- Q2d Framework Management Control -->
+<div class="q-block" id="q2d-22">
+  <div class="q-head"><span class="q-num p3">Q2d</span><div class="q-title">Framework for Management &amp; Control (Cost &amp; Schedule)</div></div>
+  <div class="q-body">
+    <div class="ref-box"><strong>→ Same as 2024-25 Q6a.</strong> See <a href="#q6a-24">Q6a 2024-25</a> for full answer with diagram. Extra EVM focus below.</div>
+    <h4>Cost Control Framework:</h4>
+    <ul>
+      <li><strong>Cost Baseline (S-curve)</strong> — time-phased budget; changes only through formal change control</li>
+      <li><strong>EVM monitoring:</strong> CV = EV−AC; CPI = EV/AC</li>
+      <li><strong>Actions if over budget:</strong> scope reduction, resource optimization, renegotiate contracts</li>
+    </ul>
+    <h4>Schedule Control Framework:</h4>
+    <ul>
+      <li><strong>Schedule Baseline</strong> — approved timeline with milestones</li>
+      <li><strong>SPI = EV/PV;</strong> SV = EV−PV; Gantt tracking</li>
+      <li><strong>Fast Tracking</strong> — parallelize sequential activities</li>
+      <li><strong>Crashing</strong> — add resources to critical path</li>
+    </ul>
+    <div class="formula">TCPI (To-Complete Performance Index) = (BAC − EV) / (BAC − AC)
+If TCPI &gt; 1: harder work needed to meet budget</div>
+  </div>
+</div>
+
+<!-- Q2e Hackman-Oldham -->
+<div class="q-block" id="q2e-22">
+  <div class="q-head"><span class="q-num p3">Q2e</span><div class="q-title">Oldham-Hackman Job Characteristics Model</div></div>
+  <div class="q-body">
+    <div class="ref-box"><strong>→ Same as 2024-25 Q7b.</strong> See <a href="#q7b-24">Q7b 2024-25</a> for full answer with diagram.</div>
+  </div>
+</div>
+
+<!-- ───── Section C ───── -->
+<div id="p3-c" class="sec-head">Section C — Long Answers (10 × 5 = 50)</div>
+
+<!-- Q3a Characteristics + Monitoring -->
+<div class="q-block" id="q3a-22">
+  <div class="q-head"><span class="q-num p3">Q3a</span><div class="q-title">(i) Characteristics of Project Objectives &amp; (ii) Management Principles for Monitoring</div></div>
+  <div class="q-body">
+    <h4>(i) Characteristics of Good Project Objectives — SMART+:</h4>
+    <table>
+      <tr><th>Characteristic</th><th>Definition</th><th>Bad Example</th><th>Good Example</th></tr>
+      <tr><td><strong>Specific</strong></td><td>Clearly defines what will be delivered</td><td>"Improve software"</td><td>"Reduce page load to &lt;2 seconds"</td></tr>
+      <tr><td><strong>Measurable</strong></td><td>Can be quantified and verified</td><td>"Faster performance"</td><td>"&lt;2 second load on 90% of requests"</td></tr>
+      <tr><td><strong>Achievable</strong></td><td>Realistic given constraints</td><td>"Zero bugs forever"</td><td>"&lt;5 critical bugs at release"</td></tr>
+      <tr><td><strong>Relevant</strong></td><td>Aligned with business strategy</td><td>Unrelated feature requests</td><td>"Increases conversion by 10%"</td></tr>
+      <tr><td><strong>Time-bound</strong></td><td>Has a specific deadline</td><td>"Soon"</td><td>"By 31 December 2025"</td></tr>
+      <tr><td><strong>Consistent</strong></td><td>No contradictory objectives</td><td colspan="2">Don't say "maximize features" and "minimize cost" simultaneously without priority</td></tr>
+      <tr><td><strong>Agreed</strong></td><td>All stakeholders accept them</td><td colspan="2">Signed off in project charter</td></tr>
+    </table>
+
+    <h4>(ii) Management Principles for Controlling and Monitoring:</h4>
+    <ol>
+      <li><strong>Exception Principle</strong> — only escalate issues outside acceptable thresholds; don't micromanage</li>
+      <li><strong>Management by Objectives (MBO)</strong> — agree on targets; evaluate performance against them objectively</li>
+      <li><strong>Earned Value Principle</strong> — measure progress by value delivered (EV) not just money spent</li>
+      <li><strong>Transparency</strong> — honest reporting; no hiding of problems from stakeholders</li>
+      <li><strong>Timely Intervention</strong> — identify deviations early, not waiting for end-of-phase reviews</li>
+      <li><strong>Corrective Action</strong> — don't just monitor; act on variances; update plans</li>
+      <li><strong>Baseline Management</strong> — change baseline only through formal change control; never informally</li>
+      <li><strong>Regular Reviews</strong> — weekly/fortnightly status meetings with structured agendas</li>
+      <li><strong>Risk-based Control</strong> — focus monitoring attention on high-risk activities</li>
+      <li><strong>Documentation</strong> — all decisions, changes, and issues documented for auditability</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Q3b Cash Flow (same as 2023-24) -->
+<div class="q-block" id="q3b-22">
+  <div class="q-head"><span class="q-num p3">Q3b</span><div class="q-title">Cash Flow Analysis — NP, PP, ROI, NPV</div></div>
+  <div class="q-body">
+    <div class="ref-box"><strong>→ Identical to 2023-24 Q3b.</strong> See <a href="#q3b-23">Q3b 2023-24</a> for complete worked solution with all calculations.</div>
+    <div class="highlight">
+      <strong>Final Answers:</strong><br>
+      NP: P1=+50K, P2=+1L, P3=+50K, P4=+75K<br>
+      PP: P1=4.5yr, P2=4.67yr, P3=3.33yr, P4=4.0yr<br>
+      ROI: P1=50%, P2=10%, P3=50%, P4=62.5%<br>
+      NPV: P1=+620, P2=−1,79,900, P3=+13,700, P4=+21,645<br>
+      <strong>Best = Project 4 by NPV and ROI | Reject Project 2 (negative NPV)</strong>
+    </div>
+  </div>
+</div>
+
+<!-- Q4a RAD (same as 2023-24 Q4a) -->
+<div class="q-block" id="q4a-22">
+  <div class="q-head"><span class="q-num p3">Q4a</span><div class="q-title">RAD Model for Software Development</div></div>
+  <div class="q-body">
+    <div class="ref-box"><strong>→ Same as 2024-25 Q2b and 2023-24 Q4a.</strong> See <a href="#q2b-24">Q2b 2024-25</a> for full answer with phase diagram.</div>
+  </div>
+</div>
+
+<!-- Q4b Agile (same as 2023-24 Q4b) -->
+<div class="q-block" id="q4b-22">
+  <div class="q-head"><span class="q-num p3">Q4b</span><div class="q-title">Agile Methodologies for Software Development</div></div>
+  <div class="q-body">
+    <div class="ref-box"><strong>→ Same as 2023-24 Q4b.</strong> See <a href="#q4b-23">Q4b 2023-24</a> for full answer with Scrum diagram.</div>
+  </div>
+</div>
+
+<!-- Q5a CPM 2022-23 -->
+<div class="q-block" id="q5a-22">
+  <div class="q-head"><span class="q-num p3">Q5a</span><div class="q-title">CPM Network — Forward &amp; Backward Pass (2022-23 activities)</div></div>
+  <div class="q-body">
+    <h4>Given Activities:</h4>
+    <table>
+      <tr><th>Activity</th><th>Duration (wks)</th><th>Precedents</th></tr>
+      <tr><td>A</td><td>6</td><td>—</td></tr>
+      <tr><td>B</td><td>4</td><td>—</td></tr>
+      <tr><td>C</td><td>3</td><td>A</td></tr>
+      <tr><td>D</td><td>4</td><td>B</td></tr>
+      <tr><td>E</td><td>3</td><td>B</td></tr>
+      <tr><td>F</td><td>10</td><td>—</td></tr>
+      <tr><td>G</td><td>3</td><td>E, F</td></tr>
+      <tr><td>H</td><td>2</td><td>C, D</td></tr>
+    </table>
+
+    <h4>Forward Pass:</h4>
+    <table>
+      <tr><th>Activity</th><th>ES</th><th>Duration</th><th>EF</th><th>Logic</th></tr>
+      <tr><td>A</td><td>0</td><td>6</td><td>6</td><td>No predecessor</td></tr>
+      <tr><td>B</td><td>0</td><td>4</td><td>4</td><td>No predecessor</td></tr>
+      <tr><td>F</td><td>0</td><td>10</td><td>10</td><td>No predecessor</td></tr>
+      <tr><td>C</td><td>6</td><td>3</td><td>9</td><td>After A (EF=6)</td></tr>
+      <tr><td>D</td><td>4</td><td>4</td><td>8</td><td>After B (EF=4)</td></tr>
+      <tr><td>E</td><td>4</td><td>3</td><td>7</td><td>After B (EF=4)</td></tr>
+      <tr><td>H</td><td>9</td><td>2</td><td>11</td><td>max(EF_C=9, EF_D=8) = 9</td></tr>
+      <tr><td>G</td><td>10</td><td>3</td><td>13</td><td>max(EF_E=7, EF_F=10) = 10</td></tr>
+    </table>
+    <div class="highlight"><strong>Project Duration = max(EF_H=11, EF_G=13) = 13 weeks</strong></div>
+
+    <h4>Backward Pass (LF=13):</h4>
+    <table>
+      <tr><th>Activity</th><th>LF</th><th>Duration</th><th>LS</th><th>Logic</th></tr>
+      <tr><td>G</td><td>13</td><td>3</td><td>10</td><td>Terminal</td></tr>
+      <tr><td>H</td><td>13</td><td>2</td><td>11</td><td>Terminal</td></tr>
+      <tr><td>F</td><td>10</td><td>10</td><td>0</td><td>LS_G=10</td></tr>
+      <tr><td>E</td><td>10</td><td>3</td><td>7</td><td>LS_G=10</td></tr>
+      <tr><td>D</td><td>11</td><td>4</td><td>7</td><td>LS_H=11</td></tr>
+      <tr><td>C</td><td>11</td><td>3</td><td>8</td><td>LS_H=11</td></tr>
+      <tr><td>B</td><td>7</td><td>4</td><td>3</td><td>min(LS_D=7, LS_E=7)=7</td></tr>
+      <tr><td>A</td><td>8</td><td>6</td><td>2</td><td>LS_C=8</td></tr>
+    </table>
+
+    <h4>Float &amp; Critical Path:</h4>
+    <table class="cp-table">
+      <tr><th>Activity</th><th>ES</th><th>EF</th><th>LS</th><th>LF</th><th>Float</th><th>Critical?</th></tr>
+      <tr><td>A</td><td>0</td><td>6</td><td>2</td><td>8</td><td>2</td><td>No</td></tr>
+      <tr><td>B</td><td>0</td><td>4</td><td>3</td><td>7</td><td>3</td><td>No</td></tr>
+      <tr><td>C</td><td>6</td><td>9</td><td>8</td><td>11</td><td>2</td><td>No</td></tr>
+      <tr><td>D</td><td>4</td><td>8</td><td>7</td><td>11</td><td>3</td><td>No</td></tr>
+      <tr><td>E</td><td>4</td><td>7</td><td>7</td><td>10</td><td>3</td><td>No</td></tr>
+      <tr><td class="cp">F</td><td class="cp">0</td><td class="cp">10</td><td class="cp">0</td><td class="cp">10</td><td class="cp">0</td><td class="cp">✅ CRITICAL</td></tr>
+      <tr><td class="cp">G</td><td class="cp">10</td><td class="cp">13</td><td class="cp">10</td><td class="cp">13</td><td class="cp">0</td><td class="cp">✅ CRITICAL</td></tr>
+      <tr><td>H</td><td>9</td><td>11</td><td>11</td><td>13</td><td>2</td><td>No</td></tr>
+    </table>
+
+    <div id="diag-cpm2" class="diagram-wrap">
+      <div class="diagram-title">AON Network — 2022-23 (Critical Path: F→G in red)</div>
+      <svg width="100%" viewBox="0 0 680 280" role="img">
+        <title>CPM Network 2022-23</title>
+        <desc>Activity network for 2022-23 showing critical path F to G highlighted</desc>
+        <defs><marker id="arrC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+        <!-- START -->
+        <rect x="5" y="115" width="50" height="40" rx="6" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+        <text x="30" y="139" text-anchor="middle" font-size="11" font-weight="600" fill="#444441">START</text>
+
+        <!-- A top -->
+        <rect x="90" y="16" width="90" height="55" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+        <text x="135" y="36" text-anchor="middle" font-size="11" font-weight="600" fill="#0C447C">A</text>
+        <text x="135" y="51" text-anchor="middle" font-size="10" fill="#185FA5">d=6, F=2</text>
+        <text x="135" y="65" text-anchor="middle" font-size="10" fill="#185FA5">ES:0 EF:6</text>
+
+        <!-- B mid -->
+        <rect x="90" y="110" width="90" height="55" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+        <text x="135" y="130" text-anchor="middle" font-size="11" font-weight="600" fill="#0C447C">B</text>
+        <text x="135" y="145" text-anchor="middle" font-size="10" fill="#185FA5">d=4, F=3</text>
+        <text x="135" y="159" text-anchor="middle" font-size="10" fill="#185FA5">ES:0 EF:4</text>
+
+        <!-- F bottom CRITICAL -->
+        <rect x="90" y="204" width="90" height="55" rx="6" fill="#FCEBEB" stroke="#A32D2D" stroke-width="1.5"/>
+        <text x="135" y="224" text-anchor="middle" font-size="11" font-weight="600" fill="#791F1F">F ⚠</text>
+        <text x="135" y="239" text-anchor="middle" font-size="10" fill="#A32D2D">d=10, F=0</text>
+        <text x="135" y="253" text-anchor="middle" font-size="10" fill="#A32D2D">ES:0 EF:10</text>
+
+        <line x1="55" y1="130" x2="88" y2="43" stroke="#5F5E5A" stroke-width="0.7" marker-end="url(#arrC)"/>
+        <line x1="55" y1="135" x2="88" y2="138" stroke="#5F5E5A" stroke-width="0.7" marker-end="url(#arrC)"/>
+        <line x1="55" y1="138" x2="88" y2="231" stroke="#A32D2D" stroke-width="1.2" marker-end="url(#arrC)"/>
+
+        <!-- C after A -->
+        <rect x="240" y="16" width="90" height="55" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+        <text x="285" y="36" text-anchor="middle" font-size="11" font-weight="600" fill="#0C447C">C</text>
+        <text x="285" y="51" text-anchor="middle" font-size="10" fill="#185FA5">d=3, F=2</text>
+        <text x="285" y="65" text-anchor="middle" font-size="10" fill="#185FA5">ES:6 EF:9</text>
+        <line x1="180" y1="43" x2="238" y2="43" stroke="#185FA5" stroke-width="0.7" marker-end="url(#arrC)"/>
+
+        <!-- D after B -->
+        <rect x="240" y="96" width="90" height="55" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+        <text x="285" y="116" text-anchor="middle" font-size="11" font-weight="600" fill="#0C447C">D</text>
+        <text x="285" y="131" text-anchor="middle" font-size="10" fill="#185FA5">d=4, F=3</text>
+        <text x="285" y="145" text-anchor="middle" font-size="10" fill="#185FA5">ES:4 EF:8</text>
+        <line x1="180" y1="138" x2="238" y2="124" stroke="#185FA5" stroke-width="0.7" marker-end="url(#arrC)"/>
+
+        <!-- E after B -->
+        <rect x="240" y="180" width="90" height="55" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+        <text x="285" y="200" text-anchor="middle" font-size="11" font-weight="600" fill="#0C447C">E</text>
+        <text x="285" y="215" text-anchor="middle" font-size="10" fill="#185FA5">d=3, F=3</text>
+        <text x="285" y="229" text-anchor="middle" font-size="10" fill="#185FA5">ES:4 EF:7</text>
+        <line x1="180" y1="138" x2="238" y2="207" stroke="#185FA5" stroke-width="0.7" marker-end="url(#arrC)"/>
+
+        <!-- H after C,D -->
+        <rect x="395" y="46" width="90" height="55" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+        <text x="440" y="66" text-anchor="middle" font-size="11" font-weight="600" fill="#0C447C">H</text>
+        <text x="440" y="81" text-anchor="middle" font-size="10" fill="#185FA5">d=2, F=2</text>
+        <text x="440" y="95" text-anchor="middle" font-size="10" fill="#185FA5">ES:9 EF:11</text>
+        <line x1="330" y1="43" x2="393" y2="66" stroke="#185FA5" stroke-width="0.7" marker-end="url(#arrC)"/>
+        <line x1="330" y1="124" x2="393" y2="80" stroke="#185FA5" stroke-width="0.7" marker-end="url(#arrC)"/>
+
+        <!-- G after E,F CRITICAL -->
+        <rect x="395" y="175" width="90" height="55" rx="6" fill="#FCEBEB" stroke="#A32D2D" stroke-width="1.5"/>
+        <text x="440" y="195" text-anchor="middle" font-size="11" font-weight="600" fill="#791F1F">G ⚠</text>
+        <text x="440" y="210" text-anchor="middle" font-size="10" fill="#A32D2D">d=3, F=0</text>
+        <text x="440" y="224" text-anchor="middle" font-size="10" fill="#A32D2D">ES:10 EF:13</text>
+        <line x1="330" y1="207" x2="393" y2="202" stroke="#185FA5" stroke-width="0.7" marker-end="url(#arrC)"/>
+        <line x1="180" y1="231" x2="393" y2="210" stroke="#A32D2D" stroke-width="1.5" marker-end="url(#arrC)"/>
+
+        <!-- END -->
+        <rect x="540" y="106" width="60" height="44" rx="6" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+        <text x="570" y="126" text-anchor="middle" font-size="11" font-weight="600" fill="#444441">END</text>
+        <text x="570" y="142" text-anchor="middle" font-size="10" fill="#5F5E5A">Wk 13</text>
+        <line x1="485" y1="73" x2="538" y2="122" stroke="#185FA5" stroke-width="0.7" marker-end="url(#arrC)"/>
+        <line x1="485" y1="202" x2="538" y2="136" stroke="#A32D2D" stroke-width="1.5" marker-end="url(#arrC)"/>
+
+        <!-- Legend -->
+        <rect x="10" y="260" width="14" height="10" rx="2" fill="#FCEBEB" stroke="#A32D2D" stroke-width="1.2"/>
+        <text x="30" y="269" font-size="10" fill="#A32D2D">Critical Path F→G (Float=0) | Duration = 13 weeks</text>
+      </svg>
+    </div>
+    <div class="highlight"><strong>Critical Path: F → G | Duration: 13 weeks</strong></div>
+  </div>
+</div>
+
+<!-- Q5b PERT 2022-23 -->
+<div class="q-block" id="q5b-22">
+  <div class="q-head"><span class="q-num p3">Q5b</span><div class="q-title">PERT Technique — Activity Network Design with Example</div></div>
+  <div class="q-body">
+    <h4>PERT vs CPM:</h4>
+    <table>
+      <tr><th></th><th>CPM</th><th>PERT</th></tr>
+      <tr><td>Duration type</td><td>Deterministic (fixed)</td><td>Probabilistic (uncertain)</td></tr>
+      <tr><td>Time estimates</td><td>1 per activity</td><td>3 per activity (O, M, P)</td></tr>
+      <tr><td>Best for</td><td>Construction, IT projects</td><td>R&amp;D, research projects</td></tr>
+    </table>
+    <div class="formula">Expected Time: te = (O + 4M + P) / 6
+Variance: σ² = [(P − O) / 6]²
+Where O = Optimistic, M = Most Likely, P = Pessimistic</div>
+
+    <h4>Worked Example (using same A–H activity set from Q5a, with assumed O/M/P):</h4>
+    <table>
+      <tr><th>Activity</th><th>O</th><th>M</th><th>P</th><th>te = (O+4M+P)/6</th><th>σ² = [(P-O)/6]²</th></tr>
+      <tr><td>A</td><td>4</td><td>6</td><td>9</td><td>6.17</td><td>0.69</td></tr>
+      <tr><td>B</td><td>2</td><td>4</td><td>7</td><td>4.17</td><td>0.69</td></tr>
+      <tr><td>C</td><td>1</td><td>3</td><td>5</td><td>3.00</td><td>0.44</td></tr>
+      <tr><td>D</td><td>2</td><td>4</td><td>6</td><td>4.00</td><td>0.44</td></tr>
+      <tr><td>E</td><td>1</td><td>3</td><td>6</td><td>3.17</td><td>0.69</td></tr>
+      <tr><td><strong>F</strong></td><td>7</td><td>10</td><td>14</td><td><strong>10.17</strong></td><td><strong>1.36</strong></td></tr>
+      <tr><td><strong>G</strong></td><td>1</td><td>3</td><td>6</td><td><strong>3.17</strong></td><td><strong>0.69</strong></td></tr>
+      <tr><td>H</td><td>1</td><td>2</td><td>4</td><td>2.17</td><td>0.25</td></tr>
+    </table>
+    <h4>Critical Path (using te values):</h4>
+    <div class="formula">F → G = 10.17 + 3.17 = 13.34 weeks (expected project duration)</div>
+    <h4>Project Variance &amp; Standard Deviation:</h4>
+    <div class="formula">σ²_project = σ²_F + σ²_G = 1.36 + 0.69 = 2.05
+σ_project = √2.05 = 1.43 weeks</div>
+    <h4>Probability of Completing in 15 Weeks:</h4>
+    <div class="formula">Z = (Target − te) / σ = (15 − 13.34) / 1.43 = 1.16
+From Z-table: P(Z &lt; 1.16) ≈ 87.7%</div>
+    <div class="highlight"><strong>There is an 87.7% probability of completing the project within 15 weeks.</strong></div>
+  </div>
+</div>
+
+<!-- Q6a EAC VAC (same as 2023-24) -->
+<div class="q-block" id="q6a-22">
+  <div class="q-head"><span class="q-num p3">Q6a</span><div class="q-title">Earned Value Analysis + EAC &amp; VAC</div></div>
+  <div class="q-body">
+    <div class="ref-box"><strong>→ Identical to 2023-24 Q6a.</strong> See <a href="#q6a-23">Q6a 2023-24</a> for complete solution.</div>
+    <div class="highlight">
+      <strong>Final Answers:</strong> CPI=0.867 | SPI=0.929 | <strong>EAC = $26,166</strong> | <strong>VAC = −$4,166</strong><br>
+      Project will overrun by $4,166. Both indices &lt;1 — corrective action needed.
+    </div>
+  </div>
+</div>
+
+<!-- Q6b SPI CPI (same as 2023-24) -->
+<div class="q-block" id="q6b-22">
+  <div class="q-head"><span class="q-num p3">Q6b</span><div class="q-title">SPI &amp; CPI Calculation</div></div>
+  <div class="q-body">
+    <div class="ref-box"><strong>→ Identical to 2023-24 Q6b.</strong> See <a href="#q6b-23">Q6b 2023-24</a> for complete solution.</div>
+    <div class="highlight"><strong>SPI = 0.923</strong> (behind schedule) | <strong>CPI = 0.80</strong> (over budget)</div>
+  </div>
+</div>
+
+<!-- Q7a Staffing factors -->
+<div class="q-block" id="q7a-22">
+  <div class="q-head"><span class="q-num p3">Q7a</span><div class="q-title">Factors Influencing Staffing Decisions in SPM + Impact of Poor Decisions</div></div>
+  <div class="q-body">
+    <h4>Factors Influencing Staffing:</h4>
+    <table>
+      <tr><th>Factor</th><th>Consideration</th></tr>
+      <tr><td>Technical Skill Match</td><td>Match staff skills to project technology stack</td></tr>
+      <tr><td>Project Size &amp; Complexity</td><td>Large projects need structured teams; small = flat teams</td></tr>
+      <tr><td>Project Phase</td><td>Early: architects; Development: coders; Testing: QA specialists</td></tr>
+      <tr><td>Availability &amp; Cost</td><td>Balance cost (junior) vs. speed (senior)</td></tr>
+      <tr><td>Team Dynamics</td><td>Personality compatibility; introvert/extrovert balance</td></tr>
+      <tr><td>Organizational Policies</td><td>HR policies; security clearance; contract vs. permanent</td></tr>
+      <tr><td>Geography</td><td>Collocated vs. distributed; time zone issues for collaboration</td></tr>
+    </table>
+    <h4>Impact of Poor Staffing Decisions:</h4>
+    <table>
+      <tr><th>Poor Decision</th><th>Impact</th></tr>
+      <tr><td>Under-qualified staff on critical tasks</td><td>Defects, rework, schedule slippage</td></tr>
+      <tr><td>Over-qualified staff on simple work</td><td>High cost, boredom, resignation risk</td></tr>
+      <tr><td>Wrong team size</td><td>Too small: burnout; Too large: Brooks' Law (adding people makes it later)</td></tr>
+      <tr><td>Ignoring team dynamics</td><td>Conflicts, low morale, reduced velocity</td></tr>
+      <tr><td>Late staffing</td><td>Ramp-up delays; critical path slippage</td></tr>
+    </table>
+    <div class="formula">Brooks' Law: "Adding manpower to a late software project makes it later"
+(New members need ramp-up time and increase communication overhead)</div>
+  </div>
+</div>
+
+<!-- Q7b Professional Ethics -->
+<div class="q-block" id="q7b-22">
+  <div class="q-head"><span class="q-num p3">Q7b</span><div class="q-title">Professional &amp; Ethical Concerns in SPM</div></div>
+  <div class="q-body">
+    <h4>Professional Concerns:</h4>
+    <table>
+      <tr><th>Concern</th><th>Description</th></tr>
+      <tr><td><strong>Competence</strong></td><td>PMs must maintain up-to-date skills; using outdated techniques harms projects</td></tr>
+      <tr><td><strong>Honest Reporting</strong></td><td>Accurate status reporting; not hiding problems to look good</td></tr>
+      <tr><td><strong>Intellectual Property</strong></td><td>Proper software licensing; not using pirated tools or stealing code</td></tr>
+      <tr><td><strong>Confidentiality</strong></td><td>Protecting client data, trade secrets, and project information</td></tr>
+      <tr><td><strong>Conflict of Interest</strong></td><td>Disclosing personal interests that may bias vendor decisions</td></tr>
+    </table>
+    <h4>Ethical Concerns:</h4>
+    <table>
+      <tr><th>Concern</th><th>Description</th></tr>
+      <tr><td><strong>Bribery &amp; Corruption</strong></td><td>Resisting kickbacks from vendors; falsification of records</td></tr>
+      <tr><td><strong>Privacy</strong></td><td>GDPR compliance; building privacy-respecting systems</td></tr>
+      <tr><td><strong>Safety-Critical Systems</strong></td><td>Ethical duty not to release software with known critical defects</td></tr>
+      <tr><td><strong>Accessibility</strong></td><td>Building inclusive software for users with disabilities</td></tr>
+      <tr><td><strong>Honest Estimation</strong></td><td>Not deliberately underestimating to win contracts then overrunning</td></tr>
+      <tr><td><strong>Whistleblowing</strong></td><td>Duty to report illegal activity or serious quality compromises</td></tr>
+    </table>
+    <div class="highlight">
+      <strong>Professional Codes:</strong><br>
+      ACM Code of Ethics — prioritize public interest<br>
+      IEEE Software Engineering Code — 8 principles: Public, Client, Product, Judgment, Management, Profession, Colleagues, Self
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ QUICK REVISION CARD ═══════════════ -->
+<div style="margin-top: 40px; padding: 24px; background: var(--bg2); border-radius: 12px; border: 1px solid var(--border);">
+  <h2 style="font-size: 16px; font-weight: 700; color: var(--accent); margin-bottom: 16px;">🎯 High-Probability Topics (appeared in all 3 papers)</h2>
+  <table>
+    <tr><th>Topic</th><th>Appeared In</th><th>Quick Formula/Key Point</th></tr>
+    <tr><td><strong>Cash Flow — NP, PP, ROI, NPV</strong></td><td>2022-23, 2023-24</td><td>NPV = ΣCF/(1+r)^t − Investment. Best = highest NPV.</td></tr>
+    <tr><td><strong>EAC &amp; VAC</strong></td><td>2022-23, 2023-24</td><td>EAC=AC+(BAC-EV)/(CPI×SPI); VAC=BAC-EAC</td></tr>
+    <tr><td><strong>SPI &amp; CPI</strong></td><td>2022-23, 2023-24</td><td>SPI=EV/PV; CPI=EV/AC; EV=%done×PV</td></tr>
+    <tr><td><strong>CPM/PERT Network</strong></td><td>All 3 papers</td><td>Float=LS-ES; Critical = Float 0; PERT: te=(O+4M+P)/6</td></tr>
+    <tr><td><strong>RAD Model</strong></td><td>All 3 papers</td><td>4 phases: Req Planning → User Design → Construction → Cutover</td></tr>
+    <tr><td><strong>Agile/Scrum</strong></td><td>All 3 papers</td><td>Sprint 1-4 wks; Scrum Master; Product Owner; Backlog</td></tr>
+    <tr><td><strong>Function Points</strong></td><td>2022-23, 2023-24</td><td>AFP = UFP × VAF; UFP = Σ(count × weight)</td></tr>
+    <tr><td><strong>Hackman-Oldham</strong></td><td>2022-23, 2023-24</td><td>MPS = (SV+TI+TS)/3 × Autonomy × Feedback</td></tr>
+    <tr><td><strong>COCOMO II</strong></td><td>2024-25, 2023-24</td><td>PM = 2.94 × Size^E × ∏EM; 5 scale factors + 17 cost drivers</td></tr>
+    <tr><td><strong>SCM</strong></td><td>2022-23, 2023-24</td><td>Config ID → Control → Status → Audit → Build → Release</td></tr>
+  </table>
+  <p style="font-size: 13px; color: var(--text3); margin-top: 12px;">All the best for your exam tomorrow! 🍀</p>
+</div>
+
+</main>
+
+</body>
+</html>
